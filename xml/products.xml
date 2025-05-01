@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <Id>112</Id>
+    <ProductName>קרם הגנה</ProductName>
+    <Category>טיפוח_אישי</Category>
+    <Price>70</Price>
+    <QuantityInStock>200</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>116</Id>
+    <ProductName>סבון</ProductName>
+    <Category>טיפוח_עור_הפנים</Category>
+    <Price>25</Price>
+    <QuantityInStock>15</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>125</Id>
+    <ProductName>קרם לחות</ProductName>
+    <Category>טיפוח_אישי</Category>
+    <Price>50</Price>
+    <QuantityInStock>100</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>127</Id>
+    <ProductName>אלוורה</ProductName>
+    <Category>משקאות</Category>
+    <Price>130</Price>
+    <QuantityInStock>20</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>128</Id>
+    <ProductName>דבש</ProductName>
+    <Category>מוצרי_כוורת</Category>
+    <Price>20</Price>
+    <QuantityInStock>300</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>129</Id>
+    <ProductName>פילינג</ProductName>
+    <Category>טיפוח_העור</Category>
+    <Price>80</Price>
+    <QuantityInStock>70</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>133</Id>
+    <ProductName>סרום</ProductName>
+    <Category>טיפוח_עור_הפנים</Category>
+    <Price>47</Price>
+    <QuantityInStock>20</QuantityInStock>
+  </Product>
+</ArrayOfProduct>

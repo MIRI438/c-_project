@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Customer>
+    <Id>214915266</Id>
+    <Name>חיה</Name>
+    <Address>ברכפלד</Address>
+    <Phone>534192458</Phone>
+  </Customer>
+  <Customer>
+    <Id>25547241</Id>
+    <Name>שושי</Name>
+    <Address>ברכפלד</Address>
+    <Phone>502446876</Phone>
+  </Customer>
+  <Customer>
+    <Id>354788898</Id>
+    <Name>שרה</Name>
+    <Address>קרית ספר</Address>
+    <Phone>89741004</Phone>
+  </Customer>
+  <Customer>
+    <Id>327824371</Id>
+    <Name>מרים חנה</Name>
+    <Address>הרב שיינברג מתתיהו</Address>
+    <Phone>533157813</Phone>
+  </Customer>
+  <Customer>
+    <Id>332218745</Id>
+    <Name>נעמה בר לב</Name>
+    <Address>מתתיהו</Address>
+    <Phone>558787558</Phone>
+  </Customer>
+</ArrayOfCustomer>
