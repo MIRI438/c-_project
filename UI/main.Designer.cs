@@ -28,39 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnShopeKeeper = new Button();
-            btnBoss = new Button();
+            btnSohpkeeperMenu = new Button();
+            btnManegerMenu = new Button();
             SuspendLayout();
             // 
-            // btnShopeKeeper
+            // btnSohpkeeperMenu
             // 
-            btnShopeKeeper.BackColor = SystemColors.Control;
-            btnShopeKeeper.Location = new Point(418, 168);
-            btnShopeKeeper.Name = "btnShopeKeeper";
-            btnShopeKeeper.Size = new Size(120, 62);
-            btnShopeKeeper.TabIndex = 0;
-            btnShopeKeeper.Text = "קופאי";
-            btnShopeKeeper.UseVisualStyleBackColor = false;
-            btnShopeKeeper.Click += button1_Click;
+            btnSohpkeeperMenu.Location = new Point(233, 120);
+            btnSohpkeeperMenu.Name = "btnSohpkeeperMenu";
+            btnSohpkeeperMenu.Size = new Size(115, 50);
+            btnSohpkeeperMenu.TabIndex = 0;
+            btnSohpkeeperMenu.Text = "קופאי";
+            btnSohpkeeperMenu.UseVisualStyleBackColor = true;
             // 
-            // btnBoss
+            // btnManegerMenu
             // 
-            btnBoss.BackColor = SystemColors.ButtonFace;
-            btnBoss.Location = new Point(280, 168);
-            btnBoss.Name = "btnBoss";
-            btnBoss.Size = new Size(120, 62);
-            btnBoss.TabIndex = 0;
-            btnBoss.Text = "מנהל";
-            btnBoss.UseVisualStyleBackColor = false;
-            btnBoss.Click += button1_Click;
+            btnManegerMenu.Location = new Point(366, 120);
+            btnManegerMenu.Name = "btnManegerMenu";
+            btnManegerMenu.Size = new Size(115, 50);
+            btnManegerMenu.TabIndex = 0;
+            btnManegerMenu.Text = "מנהל";
+            btnManegerMenu.UseVisualStyleBackColor = true;
+            btnManegerMenu.Click += btnManegerMenu_Click;
             // 
             // main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnBoss);
-            Controls.Add(btnShopeKeeper);
+            ClientSize = new Size(700, 338);
+            Controls.Add(btnManegerMenu);
+            Controls.Add(btnSohpkeeperMenu);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "main";
             Text = "Form1";
             ResumeLayout(false);
@@ -68,7 +66,7 @@
 
         #endregion
 
-        private Button btnShopeKeeper;
-        private Button btnBoss;
+        private Button btnSohpkeeperMenu;
+        private Button btnManegerMenu;
     }
 }
