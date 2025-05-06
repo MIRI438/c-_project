@@ -5,27 +5,21 @@ namespace Tools
 {
     public static class LogManager
     {
-        private static readonly string Path = "Log";
+        private static readonly string LogDirectoryPath = "Log";
 
-        /// <summary>
-        /// פונקיצה להחזרת הניותב של התיקיה
-        /// </summary>
         private static string GetFolderPath()
         {
-            if (!Directory.Exists(Path))
+            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, LogDirectoryPath);
+            if (!Directory.Exists(folderPath))
             {
-                Directory.CreateDirectory($"{DateTime.Now.Year}_{DateTime.Now.Month}");
+                Directory.CreateDirectory(folderPath);
             }
-
-            return Path;
+            return folderPath;
         }
 
-        /// <summary>
-        /// פונקיצה להחזרת הניתוב של הקובץ
-        /// </summary>
         private static string GetFilePath()
         {
-            string folderPath = GetFolderPath(); 
+            string folderPath = GetFolderPath();
             string filePath = @$"{folderPath}\Log_{DateTime.Now.Year}_{DateTime.Now.Month}_{DateTime.Now.Day}.txt";
 
             if (!File.Exists(filePath))
@@ -35,40 +29,30 @@ namespace Tools
 
             return filePath;
         }
-        
 
-        /// <summary>
-        /// פונקציה לכתיבת הלוגים
-        /// </summary>
         public static void WriteToLog(string nameOfProject, string message)
         {
-            string logFilePath = GetFilePath(); 
+            string logFilePath = GetFilePath();
             using (StreamWriter sw = new StreamWriter(logFilePath, true))
             {
                 sw.WriteLine($"{DateTime.Now}\t{nameOfProject}:\t{message}");
             }
         }
 
-
-        /// <summary>
-        /// פונקציה לניקוי הלוגיים הישנים
-        /// </summary>
         public static void CleanLog()
         {
-            string[] subDirectories = Directory.GetDirectories(Path);
+            string[] subDirectories = Directory.GetDirectories(LogDirectoryPath);
             foreach (string Dir in subDirectories)
             {
                 if (int.TryParse(Dir.Substring(0, 4), out int year) && year < DateTime.Now.Year)
                 {
-                    Directory.Delete(Dir,true);
+                    Directory.Delete(Dir, true);
                 }
                 else if (int.TryParse(Dir.Substring(5, Dir.Length), out int month) && year == DateTime.Now.Year && month < DateTime.Now.Month)
                 {
-                    Directory.Delete(Dir,true);
+                    Directory.Delete(Dir, true);
                 }
             }
         }
-
     }
-    
 }

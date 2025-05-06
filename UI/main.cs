@@ -16,5 +16,15 @@ namespace UI
             m.Show();
             m.TopMost = true;
         }
+
+        private void btnSohpkeeperMenu_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            Point currentFormLocation = this.Location;
+            l.StartPosition = FormStartPosition.Manual;
+            l.Location = currentFormLocation;
+            l.Show();
+            l.TopMost = true;
+        }
     }
 }

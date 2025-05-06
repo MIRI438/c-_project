@@ -40,6 +40,7 @@
             btnSohpkeeperMenu.TabIndex = 0;
             btnSohpkeeperMenu.Text = "קופאי";
             btnSohpkeeperMenu.UseVisualStyleBackColor = true;
+            btnSohpkeeperMenu.Click += btnSohpkeeperMenu_Click;
             // 
             // btnManegerMenu
             // 

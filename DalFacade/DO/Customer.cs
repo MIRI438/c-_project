@@ -13,13 +13,14 @@ namespace DO
     /// <param name="Name">שם לקוח</param>
     /// <param name="Address">כתובת לקוח</param>
     /// <param name="Phone">טלפון לקוח</param>
+    /// <param name="inClub">האם לקוח רשום</param>
     public record Customer
-        (int Id, string Name, string Address, int Phone)
+        (int Id, string Name, string Address, int Phone, bool inClub)
     {
         /// <summary>
         /// בנאי ריק של מחלקת Customer
         /// </summary>
-        public Customer() : this(0, "מירי", "מושב מתתיהו", 0534198438)
+        public Customer() : this(0, "מירי", "מושב מתתיהו", 0534198438,true)
         {
 
         }

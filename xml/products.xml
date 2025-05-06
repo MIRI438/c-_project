@@ -49,4 +49,74 @@
     <Price>47</Price>
     <QuantityInStock>20</QuantityInStock>
   </Product>
+  <Product>
+    <Id>139</Id>
+    <ProductName>קרם לחות</ProductName>
+    <Category>טיפוח_אישי</Category>
+    <Price>50</Price>
+    <QuantityInStock>100</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>140</Id>
+    <ProductName>קרם הגנה</ProductName>
+    <Category>טיפוח_אישי</Category>
+    <Price>70</Price>
+    <QuantityInStock>200</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>141</Id>
+    <ProductName>אלוורה</ProductName>
+    <Category>משקאות</Category>
+    <Price>130</Price>
+    <QuantityInStock>20</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>142</Id>
+    <ProductName>דבש</ProductName>
+    <Category>מוצרי_כוורת</Category>
+    <Price>20</Price>
+    <QuantityInStock>300</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>143</Id>
+    <ProductName>פילינג</ProductName>
+    <Category>טיפוח_העור</Category>
+    <Price>80</Price>
+    <QuantityInStock>70</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>144</Id>
+    <ProductName>קרם לחות</ProductName>
+    <Category>טיפוח_אישי</Category>
+    <Price>50</Price>
+    <QuantityInStock>100</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>145</Id>
+    <ProductName>קרם הגנה</ProductName>
+    <Category>טיפוח_אישי</Category>
+    <Price>70</Price>
+    <QuantityInStock>200</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>146</Id>
+    <ProductName>אלוורה</ProductName>
+    <Category>משקאות</Category>
+    <Price>130</Price>
+    <QuantityInStock>20</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>147</Id>
+    <ProductName>דבש</ProductName>
+    <Category>מוצרי_כוורת</Category>
+    <Price>20</Price>
+    <QuantityInStock>300</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>148</Id>
+    <ProductName>פילינג</ProductName>
+    <Category>טיפוח_העור</Category>
+    <Price>80</Price>
+    <QuantityInStock>70</QuantityInStock>
+  </Product>
 </ArrayOfProduct>

@@ -36,14 +36,18 @@ namespace BL.BO
         /// </summary>
         /// <param name="c">האוביקט שדורש המרה</param>
         /// <returns></returns>
-        public static BO.Customer ConvertCustomerToBO(DO.Customer c) => new BO.Customer { Id = c.Id, Name = c.Name,Address = c.Address ,Phone = c.Phone };
+        public static BO.Customer? ConvertCustomerToBO(DO.Customer? c)
+        {
+            if (c == null) return null;
+            return new BO.Customer { Id = c.Id, Name = c.Name, Address = c.Address, Phone = c.Phone, inClub = c.inClub };
+        }
 
         /// <summary>
         /// פונקציית המרה מBO.Customer ל-DO.Customer
         /// </summary>
         /// <param name="c">האוביקט שדורש המרה</param>
         /// <returns></returns>
-        public static DO.Customer ConvertCustomerToDO(BO.Customer c) => new DO.Customer { Id = c.Id, Name = c.Name, Address = c.Address, Phone = c.Phone };
+        public static DO.Customer ConvertCustomerToDO(BO.Customer c) => new DO.Customer { Id = c.Id, Name = c.Name, Address = c.Address, Phone = c.Phone , inClub = c.inClub };
 
         /// <summary>
         /// פונקציית המרה מDO.Sale ל-BO.Sale

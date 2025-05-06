@@ -561,6 +561,7 @@ internal class Program
         string name;
         string address;
         int phone;
+        bool inClub = true;
 
         Console.WriteLine("enter customer id");
         if (!int.TryParse(Console.ReadLine(), out id)) id = 0;
@@ -574,7 +575,7 @@ internal class Program
         Console.WriteLine("enter phone number");
         if (!int.TryParse(Console.ReadLine(), out phone)) phone = 0;
 
-        Customer c = new Customer(id, name, address, phone);
+        Customer c = new Customer(id, name, address, phone,inClub);
          _dal.Customer.Create(c);
         
 
@@ -646,8 +647,9 @@ internal class Program
             Console.WriteLine("Invalid phone number. Update canceled.");
             return;
         }
+        bool inClub = true; // Assuming inClub is always true for the updated customer
 
-        Customer updatedCustomer = new Customer(id, name, address, phone);
+        Customer updatedCustomer = new Customer(id, name, address, phone , inClub);
 
         try
         {

@@ -35,10 +35,10 @@ public static class Initialization
         if (_dal.Customer != null)
         {
             LogManager.WriteToLog(projectName, $"Starting {functionName}");
-            _dal.Customer.Create(new Customer(327824371, "מירי", "מתתיהו", 0534198438));
-            _dal.Customer.Create(new Customer(214915266, "חיה", "ברכפלד", 0534192458));
-            _dal.Customer.Create(new Customer(025547241, "שושי", "ברכפלד", 0502446876));
-            _dal.Customer.Create(new Customer(354788898, "שרה", "קרית ספר", 089741004));
+            _dal.Customer.Create(new Customer(327824371, "מירי", "מתתיהו", 0534198438, true));
+            _dal.Customer.Create(new Customer(214915266, "חיה", "ברכפלד", 0534192458, true));
+            _dal.Customer.Create(new Customer(025547241, "שושי", "ברכפלד", 0502446876, true));
+            _dal.Customer.Create(new Customer(354788898, "שרה", "קרית ספר", 089741004, true));
             LogManager.WriteToLog(projectName, $"{functionName} completed successfully.");
         }
     }

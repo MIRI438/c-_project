@@ -92,7 +92,12 @@ namespace BL.BlImplementation
             try
             {
                 var newFilter = BO.Tools.ConvertFilterCustomerBOtoDO(filter);
-                return BO.Tools.ConvertCustomerToBO(_dal.Customer.Read(newFilter));
+                var customerDO = _dal.Customer.Read(newFilter);
+
+                if (customerDO == null)
+                    throw new BlIdNotFoundException("Customer not found with the given filter.");
+
+                return BO.Tools.ConvertCustomerToBO(customerDO);
             }
             catch (Exception e)
             {

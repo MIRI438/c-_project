@@ -31,6 +31,8 @@ namespace BL.BO
         /// </summary>
         public int Phone { get; set; }
 
+        public bool inClub { get; set; }
+
         /// <summary>
         /// בנאי מלא של המחלקה-Customer
         /// </summary>
@@ -38,12 +40,16 @@ namespace BL.BO
         /// <param name="name">שם הלקוח</param>
         /// <param name="address">כתובת הלקוח</param>
         /// <param name="phone">טלפון הלקוח</param>
-        public Customer(int id, string name, string address, int phone)
+        /// <param name="inClub">טלפון הלקוח</param>
+
+        public Customer(int id, string name, string address, int phone, bool inClub)
         {
             Id = id;
             Name = name;
             Address = address;
             Phone = phone;
+            this.inClub = inClub;
+
         }
 
         /// <summary>
@@ -53,12 +59,14 @@ namespace BL.BO
         /// <param name="name">שם הלקוח</param>
         /// <param name="address">כתובת הלקוח</param>
         /// <param name="phone">טלפון הלקוח</param>
+        /// <param name="inClub">האם לקוח רשום</param>"
         public Customer()
         {
             Id = 0;
             Name = "";
             Address = "";
             Phone = 0;
+            inClub = true;
         }
 
         /// <summary>
