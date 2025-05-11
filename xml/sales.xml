@@ -1,33 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSale>
   <Sale>
-    <Code>102</Code>
-    <ProductId>245</ProductId>
-    <MinQuantity>2</MinQuantity>
-    <Price>140</Price>
-    <InClab>false</InClab>
-    <BeginSale>2025-04-28T22:44:13.8400274+03:00</BeginSale>
-    <EndSale>2025-05-04T22:44:13.8400308+03:00</EndSale>
-  </Sale>
-  <Sale>
-    <Code>103</Code>
-    <ProductId>32</ProductId>
-    <MinQuantity>3</MinQuantity>
-    <Price>300</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-04-30T15:50:00.2058077+03:00</BeginSale>
-    <EndSale>2025-05-08T15:50:00.2058167+03:00</EndSale>
-  </Sale>
-  <Sale>
-    <Code>105</Code>
-    <ProductId>116</ProductId>
-    <MinQuantity>2</MinQuantity>
-    <Price>22</Price>
-    <InClab>false</InClab>
-    <BeginSale>2025-05-01T20:08:06.719</BeginSale>
-    <EndSale>2025-05-03T20:08:06.703</EndSale>
-  </Sale>
-  <Sale>
     <Code>110</Code>
     <ProductId>32</ProductId>
     <MinQuantity>3</MinQuantity>
@@ -55,12 +28,39 @@
     <EndSale>2025-05-14T15:06:31.4481934+03:00</EndSale>
   </Sale>
   <Sale>
-    <Code>113</Code>
-    <ProductId>245</ProductId>
+    <Code>116</Code>
+    <ProductId>154</ProductId>
+    <MinQuantity>4</MinQuantity>
+    <Price>250</Price>
+    <InClab>true</InClab>
+    <BeginSale>2025-05-11T16:46:14.2503178+03:00</BeginSale>
+    <EndSale>2025-05-29T16:46:14.23</EndSale>
+  </Sale>
+  <Sale>
+    <Code>117</Code>
+    <ProductId>133</ProductId>
     <MinQuantity>2</MinQuantity>
-    <Price>140</Price>
-    <InClab>false</InClab>
-    <BeginSale>2025-05-06T15:06:31.4568477+03:00</BeginSale>
-    <EndSale>2025-05-12T15:06:31.4568586+03:00</EndSale>
+    <Price>100</Price>
+    <InClab>true</InClab>
+    <BeginSale>2025-05-11T16:48:12.6134183+03:00</BeginSale>
+    <EndSale>2025-06-04T16:48:12.609</EndSale>
+  </Sale>
+  <Sale>
+    <Code>118</Code>
+    <ProductId>117</ProductId>
+    <MinQuantity>156</MinQuantity>
+    <Price>2</Price>
+    <InClab>true</InClab>
+    <BeginSale>2025-05-11T16:51:17.9780621+03:00</BeginSale>
+    <EndSale>2025-05-29T16:51:17.966</EndSale>
+  </Sale>
+  <Sale>
+    <Code>120</Code>
+    <ProductId>158</ProductId>
+    <MinQuantity>2</MinQuantity>
+    <Price>30</Price>
+    <InClab>true</InClab>
+    <BeginSale>2025-05-11T16:59:22.2569887+03:00</BeginSale>
+    <EndSale>2025-05-29T16:59:22.246</EndSale>
   </Sale>
 </ArrayOfSale>

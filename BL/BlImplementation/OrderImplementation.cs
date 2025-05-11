@@ -18,6 +18,8 @@ namespace BL.BlImplementation
         /// <param name="order"></param>
         public List<SaleInProduct> AddProductToOrder(Order order, int id, int amount)
         {
+            if(_dal.Product.Read(id) == null)
+                throw new Exception("המוצר לא קיים במערכת");
             if (amount <= 0)
                 throw new Exception("הכמות לא טובה");
 
@@ -53,9 +55,11 @@ namespace BL.BlImplementation
                     throw new Exception("אין מספיק מלאי עבור הכמות המבוקשת.");
                 }
             }
+            DoOrder(order);
             SearchSaleForProduct(productInOrder,order.IsPreferredCustomer);
             CalcTotalPriceForProduct(productInOrder);
             CalcTotalPrice(order);
+
             return productInOrder.Sales;
 
         }
@@ -115,20 +119,34 @@ namespace BL.BlImplementation
         }
 
         
-        /// <summary>
         /// הפונקציה מעדכנת את המבצעים המתאימים למוצר
         /// </summary>
         /// <param name="order"></param>
         public void DoOrder(Order order)
         {
-            foreach (BO.ProductInOrder p in order.Products)
+            try
             {
-                DO.Product p1 = _dal.Product.Read(p.ProductId);
-                BO.Product p2 = BO.Tools.ConvertProductToBO(p1);
-                p2.QuantityInStock -= p.QuantityInOrder;
-                p1 = BO.Tools.ConvertProductToDO(p2);
-                _dal.Product.Update(p1);
-                Console.WriteLine($"Product {p.ProductId} updated. New QuantityInStock: {p2.QuantityInStock}");
+                foreach (BO.ProductInOrder p in order.Products)
+                {
+                    DO.Product p1 = _dal.Product.Read(p.ProductId);
+                    BO.Product p2 = BO.Tools.ConvertProductToBO(p1);
+
+                    if (p2 == null)
+                    {
+                        throw new NullReferenceException("The product object (p2) is null.");
+                    }
+
+                    p2.QuantityInStock -= p.QuantityInOrder;
+                    p1 = BO.Tools.ConvertProductToDO(p2);
+                    _dal.Product.Update(p1);
+
+                    Console.WriteLine($"Product {p.ProductId} updated. New QuantityInStock: {p2.QuantityInStock}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing product: {ex.Message}");
+                throw;
             }
         }
 
@@ -142,15 +160,25 @@ namespace BL.BlImplementation
         {
             try
             {
-                order.Sales = BO.Tools.ConvertDOSalesToBOSaleInProducts(_dal.Sale.ReadAll(s => s.ProductId == order.ProductId
-                    && s.BeginSale <= DateTime.Now && s.EndSale > DateTime.Now
-                    && s.MinQuantity <= order.QuantityInOrder && IsNew == false
-                    && s.InClab == false));
-                order.Sales.ToList().ForEach(sale => Console.WriteLine(sale));
+                order.Sales = BO.Tools.ConvertDOSalesToBOSaleInProducts(
+                    _dal.Sale.ReadAll(s =>
+                        s.ProductId == order.ProductId &&
+                        s.BeginSale <= DateTime.Now &&
+                        s.EndSale > DateTime.Now &&
+                        s.MinQuantity <= order.QuantityInOrder &&
+                        !IsNew &&
+                        !s.InClab
+                    )
+                );
+
+                foreach (var sale in order.Sales)
+                {
+                    Console.WriteLine(sale);
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error fetching sales: {ex.Message}");
             }
         }
 

@@ -68,14 +68,33 @@ namespace BL.BO
         /// </summary>
         /// <param name="p">האוביקט שדורש המרה</param>
         /// <returns></returns>
-        public static BO.Product ConvertProductToBO(DO.Product p) => new BO.Product {Id = p.Id,ProductName = p.ProductName, Price = p.Price, QuantityInStock = p.QuantityInStock};
+        public static BO.Product? ConvertProductToBO(DO.Product? p)
+        {
+            if (p == null) return null;
+
+            return new BO.Product
+            {
+                Id = p.Id,
+                ProductName = p.ProductName,
+                Price = p.Price,
+                QuantityInStock = p.QuantityInStock,
+                Category = p.Category.ToString()
+            };
+        }
 
         /// <summary>
         /// פונקציית המרה מBO.Product ל-DO.Product
         /// </summary>
         /// <param name="p">האוביקט שדורש המרה</param>
         /// <returns></returns>
-        public static DO.Product ConvertProductToDO(BO.Product p) => new DO.Product { Id = p.Id, ProductName = p.ProductName, Price = p.Price, QuantityInStock = p.QuantityInStock };
+        public static DO.Product ConvertProductToDO(BO.Product p) => new DO.Product
+        {
+            Id = p.Id,
+            ProductName = p.ProductName,
+            Price = p.Price,
+            QuantityInStock = p.QuantityInStock,
+            Category = Enum.Parse<DO.Category>(p.Category) // Fix: Convert string to DO.Category
+        };
 
         /// <summary>
         /// פונקציית המרת פילטר Sale מBO לDO

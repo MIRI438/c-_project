@@ -19,7 +19,7 @@ public static class Initialization
         if (_dal.Product != null)
         {
             LogManager.WriteToLog(projectName, $"Starting {functionName}");
-            _dal.Product.Create(new Product(123, "קרם לחות", Category.טיפוח_אישי, 50.00, 100));
+            _dal.Product.Create(new Product(123, "קרם לחות", Category.טיפוח_אישי, 50.00, 100 ));
             _dal.Product.Create(new Product(244, "קרם הגנה", Category.טיפוח_אישי, 70.00, 200));
             _dal.Product.Create(new Product(032, "אלוורה", Category.משקאות, 130.00, 20));
             _dal.Product.Create(new Product(447, "דבש", Category.מוצרי_כוורת, 20.00, 300));
