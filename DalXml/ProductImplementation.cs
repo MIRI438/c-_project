@@ -98,11 +98,23 @@ namespace Dal
         {
             string functionName = MethodBase.GetCurrentMethod().Name!;
             LogManager.WriteToLog(projectName, $"Starting {functionName}");
-            Delete(item.Id);
-            Create(item);
-            LogManager.WriteToLog(projectName, $"{functionName} completed successfully.");
 
+            List<Product> products = ReadAll() ?? new List<Product>();
+
+            int index = products.FindIndex(p => p.Id == item.Id);
+            if (index == -1)
+                throw new Exception($"Product with ID {item.Id} not found.");
+
+            products[index] = item;  // עדכון פריט במקום
+
+            using (FileStream XmlWriter = new FileStream(pathProduct, FileMode.Create, FileAccess.Write))
+            {
+                serializer.Serialize(XmlWriter, products);
+            }
+
+            LogManager.WriteToLog(projectName, $"{functionName} completed successfully.");
         }
+
 
     }
 }

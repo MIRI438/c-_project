@@ -117,8 +117,14 @@ namespace UI
                     MessageBox.Show("לא נוספו מוצרים להזמנה. לא ניתן להשלים את ההזמנה.");
                     return;
                 }
+                _bl.Order.DoOrder(order);
 
                 MessageBox.Show($"ההזמנה הושלמה בהצלחה! סה\"כ לתשלום: {order.TotalPrice}");
+                order.Products.Clear();
+
+                bindingSource.ResetBindings(false);
+
+                lblTotalPrice.Text = $"סה\"כ לתשלום: 00";
                 Close();
             }
             catch (Exception ex)

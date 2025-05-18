@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <Id>143</Id>
-    <ProductName>פילינג</ProductName>
-    <Category>טיפוח_העור</Category>
-    <Price>80</Price>
-    <QuantityInStock>70</QuantityInStock>
-  </Product>
-  <Product>
-    <Id>147</Id>
-    <ProductName>דבש</ProductName>
-    <Category>מוצרי_כוורת</Category>
-    <Price>20</Price>
-    <QuantityInStock>300</QuantityInStock>
-  </Product>
-  <Product>
     <Id>148</Id>
     <ProductName>פילינג</ProductName>
     <Category>טיפוח_העור</Category>
@@ -43,13 +29,6 @@
     <QuantityInStock>297</QuantityInStock>
   </Product>
   <Product>
-    <Id>155</Id>
-    <ProductName>פילינג</ProductName>
-    <Category>טיפוח_העור</Category>
-    <Price>80</Price>
-    <QuantityInStock>60</QuantityInStock>
-  </Product>
-  <Product>
     <Id>161</Id>
     <ProductName>אלוורה</ProductName>
     <Category>משקאות</Category>
@@ -57,38 +36,17 @@
     <QuantityInStock>0</QuantityInStock>
   </Product>
   <Product>
-    <Id>166</Id>
-    <ProductName>דבש</ProductName>
-    <Category>משקאות</Category>
-    <Price>30</Price>
-    <QuantityInStock>14</QuantityInStock>
-  </Product>
-  <Product>
-    <Id>168</Id>
+    <Id>178</Id>
     <ProductName>קרם לחות</ProductName>
     <Category>טיפוח_אישי</Category>
     <Price>50</Price>
-    <QuantityInStock>98</QuantityInStock>
+    <QuantityInStock>96</QuantityInStock>
   </Product>
   <Product>
-    <Id>170</Id>
-    <ProductName>קרם לחות</ProductName>
-    <Category>טיפוח_אישי</Category>
-    <Price>50</Price>
-    <QuantityInStock>97</QuantityInStock>
-  </Product>
-  <Product>
-    <Id>171</Id>
-    <ProductName>קרם הגנה</ProductName>
-    <Category>טיפוח_אישי</Category>
-    <Price>70</Price>
-    <QuantityInStock>199</QuantityInStock>
-  </Product>
-  <Product>
-    <Id>172</Id>
+    <Id>179</Id>
     <ProductName>סרום</ProductName>
     <Category>משקאות</Category>
     <Price>45</Price>
-    <QuantityInStock>100</QuantityInStock>
+    <QuantityInStock>66</QuantityInStock>
   </Product>
 </ArrayOfProduct>

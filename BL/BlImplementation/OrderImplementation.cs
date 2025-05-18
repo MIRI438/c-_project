@@ -62,7 +62,6 @@ namespace BL.BlImplementation
             }
 
             // Process order and calculate prices
-            DoOrder(order);
             SearchSaleForProduct(productInOrder, order.IsPreferredCustomer);
             CalcTotalPriceForProduct(productInOrder);
             CalcTotalPrice(order);
@@ -132,31 +131,35 @@ namespace BL.BlImplementation
         {
             try
             {
-                foreach (BO.ProductInOrder p in order.Products)
+                foreach (var productInOrder in order.Products)
                 {
-                    DO.Product p1 = _dal.Product.Read(p.ProductId);
-                    BO.Product p2 = BO.Tools.ConvertProductToBO(p1);
+                    // שליפת המוצר מהדאטה
+                    DO.Product product = _dal.Product.Read(productInOrder.ProductId);
 
-                    if (p2 == null)
+                    if (product.QuantityInStock < productInOrder.QuantityInOrder)
+                        throw new Exception($"אין מספיק מלאי למוצר {product.ProductName}");
+
+                    // הפחתת מלאי ויצירת עותק חדש
+                    DO.Product updatedProduct = product with
                     {
-                        throw new NullReferenceException("The product object (p2) is null.");
-                    }
+                        QuantityInStock = product.QuantityInStock - productInOrder.QuantityInOrder
+                    };
 
-                    p2.QuantityInStock -= p.QuantityInOrder;
-                    DO.Product p1Updated = BO.Tools.ConvertProductToDO(p2); // השתמש במשתנה חדש
-                    _dal.Product.Update(p1Updated); // עדכן באמצעות האובייקט המעודכן
-
-                    Console.WriteLine($"Product {p.ProductId} updated. New QuantityInStock: {p2.QuantityInStock}");
+                    // עדכון בדאטה
+                    _dal.Product.Update(updatedProduct);
                 }
+
+                Console.WriteLine("ההזמנה אושרה בהצלחה.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error processing product: {ex.Message}");
+                Console.WriteLine($"שגיאה באישור ההזמנה: {ex.Message}");
                 throw;
             }
         }
-    
-        
+
+
+
 
 
         /// <summary>
@@ -164,7 +167,7 @@ namespace BL.BlImplementation
         /// </summary>
         /// <param name="order"></param>
         /// <param name="IsNew"></param>
-        public void SearchSaleForProduct(ProductInOrder order, bool IsNew)
+        public void SearchSaleForProduct(ProductInOrder order, bool isPreferredCustomer)
         {
             try
             {
@@ -174,21 +177,23 @@ namespace BL.BlImplementation
                         s.BeginSale <= DateTime.Now &&
                         s.EndSale > DateTime.Now &&
                         s.MinQuantity <= order.QuantityInOrder &&
-                        !IsNew &&
-                        !s.InClab
+                        (
+                            !s.InClab ||         // מבצע פתוח לכולם
+                            (s.InClab && isPreferredCustomer) // או שהוא מיועד למועדון והלקוח באמת במועדון
+                        )
                     )
                 );
-
-                foreach (var sale in order.Sales)
-                {
-                    Console.WriteLine(sale);
-                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error fetching sales: {ex.Message}");
             }
         }
+        
+
+
+
+
 
     }
 }

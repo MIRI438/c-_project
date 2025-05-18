@@ -82,8 +82,8 @@ namespace Dal
         {
             string functionName = MethodBase.GetCurrentMethod().Name!;
             LogManager.WriteToLog(projectName, $"Starting {functionName}");
-            return ReadAll(filter).FirstOrDefault();
             LogManager.WriteToLog(projectName, $"{functionName} completed successfully.");
+            return ReadAll(filter).FirstOrDefault();
 
         }
 
