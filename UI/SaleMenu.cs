@@ -143,5 +143,10 @@ namespace UI
         {
 
         }
+
+        private void SaleMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

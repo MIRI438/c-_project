@@ -29,15 +29,7 @@ namespace UI
                 BL.BO.Product product = new BL.BO.Product();
                 product.ProductName = tbxNameProduct.Text;
                 product.Price = (double)nudPrice.Value;
-                //if (Enum.TryParse(cbxCategory.SelectedItem.ToString(), out Category selectedCategory))
-                //{
-                //    product.Category = "vhj";
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Invalid category selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-                //}
+                product.Category = "משקאות";
                 product.QuantityInStock = (int)nudQuantityInStock.Value;
                 _bl.Product.Create(product);
                 readAll();
@@ -63,7 +55,7 @@ namespace UI
                 product.Id = (int)nudID.Value;
                 product.ProductName = txtNewName.Text;
                 product.Price = (double)nudNewPrice.Value;
-                //product.Category = (Category)Enum.Parse(typeof(Category), cbxNewCategory.ToString());
+                product.Category = "משקאות";
                 product.QuantityInStock = (int)nudNewQuantityInStock.Value;
 
                 _bl.Product.Update(product);

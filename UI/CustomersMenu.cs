@@ -88,12 +88,19 @@ namespace UI
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            BL.BO.Customer c = _bl.Customer.Read((int)nudReadCustomer.Value);
-            MessageBox.Show($"ID: {c.Id}\n" +
-                    $"Name: {c.Name}\n" +
-                    $"Address: {c.Address}\n" +
-                    $"Phone: {c.Phone}\n" +
-                    "-----------------------------");
+            try
+            {
+                BL.BO.Customer c = _bl.Customer.Read((int)nudReadCustomer.Value);
+                MessageBox.Show($"ID: {c.Id}\n" +
+                        $"Name: {c.Name}\n" +
+                        $"Address: {c.Address}\n" +
+                        $"Phone: {c.Phone}\n" +
+                        "-----------------------------");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)

@@ -63,4 +63,22 @@
     <BeginSale>2025-05-11T16:59:22.2569887+03:00</BeginSale>
     <EndSale>2025-05-29T16:59:22.246</EndSale>
   </Sale>
+  <Sale>
+    <Code>121</Code>
+    <name>SaleMenu</name>
+    <MinQuantity>3</MinQuantity>
+    <Price>80</Price>
+    <InClab>true</InClab>
+    <BeginSale>2025-05-13T14:45:24.2794056+03:00</BeginSale>
+    <EndSale>2025-05-13T14:45:24.2707589+03:00</EndSale>
+  </Sale>
+  <Sale>
+    <Code>122</Code>
+    <ProductId>100</ProductId>
+    <MinQuantity>3</MinQuantity>
+    <Price>150</Price>
+    <InClab>true</InClab>
+    <BeginSale>2025-05-18T16:19:07.2047649+03:00</BeginSale>
+    <EndSale>2025-05-28T16:19:07.189</EndSale>
+  </Sale>
 </ArrayOfSale>

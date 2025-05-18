@@ -22,10 +22,15 @@ namespace UI
                 if (_bl.Customer.IsExsit(Login.customer.Id))
                 {
                     order.IsPreferredCustomer = true;
+                    Login.customer = _bl.Customer.Read(Login.customer.Id);
+                    
+                    lblHello.Text = $"!שלום {Login.customer.Name}";
                 }
                 else
                 {
                     order.IsPreferredCustomer = false;
+                    lblHello.Text = $"!שלום אורח";
+
                 }
             }
             else
@@ -36,7 +41,7 @@ namespace UI
 
             // שאר הקוד נשאר ללא שינוי
             dgvOrderProducts.Location = new System.Drawing.Point(10, 50);
-            dgvOrderProducts.Size = new System.Drawing.Size(500, 200);
+            dgvOrderProducts.Size = new System.Drawing.Size(540, 300);
             dgvOrderProducts.AutoGenerateColumns = false;
 
             dgvOrderProducts.Columns.Add(new DataGridViewTextBoxColumn
@@ -70,13 +75,13 @@ namespace UI
             bindingSource.DataSource = order.Products;
             dgvOrderProducts.DataSource = bindingSource;
 
-            lblTotalPrice.Text = $"סה\"כ לתשלום: {order.TotalPrice}";
+            lblTotalPrice.Text = order.TotalPrice == null ? $"סה\"כ לתשלום: 00 ":  $"סה\"כ לתשלום: {order.TotalPrice}";
         }
 
 
         private void btnAddToBag_Click(object sender, EventArgs e)
         {
-            if (nudAmountToOrder.Value <= 0 || nudProductIDtoOrder == null)
+            if (nudAmountToOrder.Value <= 0 || txtNameToAdd == null)
             {
                 MessageBox.Show("יש למלא בערכים תקינים");
                 return;
@@ -85,10 +90,10 @@ namespace UI
             try
             {
                 // הוספת מוצר להזמנה
-                int productId = (int)nudProductIDtoOrder.Value;
+                string name = txtNameToAdd.Text;
                 int amount = (int)nudAmountToOrder.Value;
 
-                _bl.Order.AddProductToOrder(order, productId, amount);
+                _bl.Order.AddProductToOrder(order, name, amount);
 
                 // רענון הטבלה
                 bindingSource.ResetBindings(false);

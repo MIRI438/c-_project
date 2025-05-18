@@ -12,21 +12,25 @@ namespace BL.BlImplementation
     {
         private DalApi.IDal? _dal = DalApi.Factory.Get;
 
-        /// <summary>
-        /// פונקציה שמוסיפה מוצר להזמנה
-        /// </summary>
         /// <param name="order"></param>
-        public List<SaleInProduct> AddProductToOrder(Order order, int id, int amount)
+        public List<SaleInProduct> AddProductToOrder(Order order, string name, int amount)
         {
-            if(_dal.Product.Read(id) == null)
+            // Validate product existence
+            var productEntity = _dal.Product.Read(p => p.ProductName.Equals(name));
+            if (productEntity == null)
                 throw new Exception("המוצר לא קיים במערכת");
             if (amount <= 0)
                 throw new Exception("הכמות לא טובה");
 
-            BO.Product product = BO.Tools.ConvertProductToBO(_dal.Product.Read(id));
-            var productInOrder = order.Products.FirstOrDefault(p => p.ProductId == id);
+            // Convert product to BO
+            BO.Product product = BO.Tools.ConvertProductToBO(productEntity);
 
-            if (productInOrder != null) {
+            // Find product in order
+            var productInOrder = order.Products.FirstOrDefault(p => p.ProductId == product.Id);
+
+            if (productInOrder != null)
+            {
+                // Update quantity if sufficient stock exists
                 if (product.QuantityInStock >= (productInOrder.QuantityInOrder + amount))
                 {
                     productInOrder.QuantityInOrder += amount;
@@ -38,6 +42,7 @@ namespace BL.BlImplementation
             }
             else
             {
+                // Add new product to order if sufficient stock exists
                 if (product.QuantityInStock >= amount)
                 {
                     productInOrder = new BO.ProductInOrder(
@@ -45,8 +50,8 @@ namespace BL.BlImplementation
                         product.ProductName,
                         product.Price,
                         amount,
-                        new List<SaleInProduct>(), 
-                        0 
+                        new List<SaleInProduct>(),
+                        0
                     );
                     order.Products.Add(productInOrder);
                 }
@@ -55,13 +60,14 @@ namespace BL.BlImplementation
                     throw new Exception("אין מספיק מלאי עבור הכמות המבוקשת.");
                 }
             }
+
+            // Process order and calculate prices
             DoOrder(order);
-            SearchSaleForProduct(productInOrder,order.IsPreferredCustomer);
+            SearchSaleForProduct(productInOrder, order.IsPreferredCustomer);
             CalcTotalPriceForProduct(productInOrder);
             CalcTotalPrice(order);
 
             return productInOrder.Sales;
-
         }
 
 
@@ -118,7 +124,7 @@ namespace BL.BlImplementation
             }
         }
 
-        
+
         /// הפונקציה מעדכנת את המבצעים המתאימים למוצר
         /// </summary>
         /// <param name="order"></param>
@@ -137,8 +143,8 @@ namespace BL.BlImplementation
                     }
 
                     p2.QuantityInStock -= p.QuantityInOrder;
-                    p1 = BO.Tools.ConvertProductToDO(p2);
-                    _dal.Product.Update(p1);
+                    DO.Product p1Updated = BO.Tools.ConvertProductToDO(p2); // השתמש במשתנה חדש
+                    _dal.Product.Update(p1Updated); // עדכן באמצעות האובייקט המעודכן
 
                     Console.WriteLine($"Product {p.ProductId} updated. New QuantityInStock: {p2.QuantityInStock}");
                 }
@@ -149,6 +155,8 @@ namespace BL.BlImplementation
                 throw;
             }
         }
+    
+        
 
 
         /// <summary>

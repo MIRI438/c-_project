@@ -21,6 +21,7 @@ namespace UI
             if (nudIDtoStartShopping != null)
             {
                 int customerId = (int)nudIDtoStartShopping.Value;
+                customer.Id = customerId;
 
                 try
                 {
@@ -46,6 +47,11 @@ namespace UI
             order.Location = currentFormLocation;
             order.TopMost = true;
             order.Show();
+        }
+
+        private void nudIDtoStartShopping_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,37 +29,29 @@
         private void InitializeComponent()
         {
             lblProductIDtoOrder = new Label();
-            nudProductIDtoOrder = new NumericUpDown();
             nudAmountToOrder = new NumericUpDown();
             lblAmountToOrder = new Label();
             btnAddToBag = new Button();
             lblTotalPrice = new Label();
             label1 = new Label();
             btnPay = new Button();
-            ((System.ComponentModel.ISupportInitialize)nudProductIDtoOrder).BeginInit();
+            txtNameToAdd = new TextBox();
+            lblHello = new Label();
             ((System.ComponentModel.ISupportInitialize)nudAmountToOrder).BeginInit();
             SuspendLayout();
             // 
             // lblProductIDtoOrder
             // 
             lblProductIDtoOrder.AutoSize = true;
-            lblProductIDtoOrder.Location = new Point(674, 141);
+            lblProductIDtoOrder.Location = new Point(946, 149);
             lblProductIDtoOrder.Name = "lblProductIDtoOrder";
             lblProductIDtoOrder.Size = new Size(83, 15);
             lblProductIDtoOrder.TabIndex = 1;
-            lblProductIDtoOrder.Text = "הכנס קוד מוצר";
-            // 
-            // nudProductIDtoOrder
-            // 
-            nudProductIDtoOrder.Location = new Point(538, 139);
-            nudProductIDtoOrder.Maximum = new decimal(new int[] { -1486618624, 232830643, 0, 0 });
-            nudProductIDtoOrder.Name = "nudProductIDtoOrder";
-            nudProductIDtoOrder.Size = new Size(120, 23);
-            nudProductIDtoOrder.TabIndex = 2;
+            lblProductIDtoOrder.Text = "הכנס שם מוצר";
             // 
             // nudAmountToOrder
             // 
-            nudAmountToOrder.Location = new Point(538, 171);
+            nudAmountToOrder.Location = new Point(810, 179);
             nudAmountToOrder.Maximum = new decimal(new int[] { 276447232, 23283, 0, 0 });
             nudAmountToOrder.Name = "nudAmountToOrder";
             nudAmountToOrder.Size = new Size(120, 23);
@@ -68,7 +60,7 @@
             // lblAmountToOrder
             // 
             lblAmountToOrder.AutoSize = true;
-            lblAmountToOrder.Location = new Point(674, 173);
+            lblAmountToOrder.Location = new Point(946, 181);
             lblAmountToOrder.Name = "lblAmountToOrder";
             lblAmountToOrder.Size = new Size(59, 15);
             lblAmountToOrder.TabIndex = 3;
@@ -76,7 +68,7 @@
             // 
             // btnAddToBag
             // 
-            btnAddToBag.Location = new Point(661, 233);
+            btnAddToBag.Location = new Point(933, 241);
             btnAddToBag.Name = "btnAddToBag";
             btnAddToBag.Size = new Size(96, 23);
             btnAddToBag.TabIndex = 5;
@@ -87,7 +79,7 @@
             // lblTotalPrice
             // 
             lblTotalPrice.AutoSize = true;
-            lblTotalPrice.Location = new Point(289, 325);
+            lblTotalPrice.Location = new Point(309, 541);
             lblTotalPrice.Name = "lblTotalPrice";
             lblTotalPrice.Size = new Size(74, 15);
             lblTotalPrice.TabIndex = 7;
@@ -103,7 +95,7 @@
             // 
             // btnPay
             // 
-            btnPay.Location = new Point(538, 233);
+            btnPay.Location = new Point(810, 241);
             btnPay.Name = "btnPay";
             btnPay.Size = new Size(96, 23);
             btnPay.TabIndex = 9;
@@ -111,22 +103,38 @@
             btnPay.UseVisualStyleBackColor = true;
             btnPay.Click += btnPay_Click_1;
             // 
+            // txtNameToAdd
+            // 
+            txtNameToAdd.Location = new Point(810, 146);
+            txtNameToAdd.Name = "txtNameToAdd";
+            txtNameToAdd.Size = new Size(120, 23);
+            txtNameToAdd.TabIndex = 10;
+            // 
+            // lblHello
+            // 
+            lblHello.AutoSize = true;
+            lblHello.Location = new Point(902, 56);
+            lblHello.Name = "lblHello";
+            lblHello.Size = new Size(0, 15);
+            lblHello.TabIndex = 11;
+            // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.ScrollBar;
+            ClientSize = new Size(1184, 613);
+            Controls.Add(lblHello);
+            Controls.Add(txtNameToAdd);
             Controls.Add(btnPay);
             Controls.Add(label1);
             Controls.Add(lblTotalPrice);
             Controls.Add(btnAddToBag);
             Controls.Add(nudAmountToOrder);
             Controls.Add(lblAmountToOrder);
-            Controls.Add(nudProductIDtoOrder);
             Controls.Add(lblProductIDtoOrder);
             Name = "OrderForm";
             Text = "Ordder";
-            ((System.ComponentModel.ISupportInitialize)nudProductIDtoOrder).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudAmountToOrder).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -134,12 +142,13 @@
 
         #endregion
         private Label lblProductIDtoOrder;
-        private NumericUpDown nudProductIDtoOrder;
         private NumericUpDown nudAmountToOrder;
         private Label lblAmountToOrder;
         private Button btnAddToBag;
         private Label lblTotalPrice;
         private Label label1;
         private Button btnPay;
+        private TextBox txtNameToAdd;
+        private Label lblHello;
     }
 }

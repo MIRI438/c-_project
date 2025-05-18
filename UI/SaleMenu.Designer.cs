@@ -30,6 +30,7 @@
         {
             products = new TabControl();
             tabAddSale = new TabPage();
+            nudProductId = new NumericUpDown();
             lblEndSale = new Label();
             dtEndSale = new DateTimePicker();
             dtBeginSale = new DateTimePicker();
@@ -39,7 +40,6 @@
             lblInClub = new Label();
             nudPriceSale = new NumericUpDown();
             lblPriceSale = new Label();
-            nudProductId = new NumericUpDown();
             btnAddSale = new Button();
             nudMinQuantity = new NumericUpDown();
             lblMinQuantity = new Label();
@@ -75,8 +75,8 @@
             lblReadAll = new Label();
             products.SuspendLayout();
             tabAddSale.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nudPriceSale).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudProductId).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPriceSale).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudMinQuantity).BeginInit();
             tabUpdateSale.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudCodeSaleToUpdate).BeginInit();
@@ -100,11 +100,12 @@
             products.RightToLeft = RightToLeft.No;
             products.RightToLeftLayout = true;
             products.SelectedIndex = 0;
-            products.Size = new Size(715, 386);
+            products.Size = new Size(715, 387);
             products.TabIndex = 3;
             // 
             // tabAddSale
             // 
+            tabAddSale.Controls.Add(nudProductId);
             tabAddSale.Controls.Add(lblEndSale);
             tabAddSale.Controls.Add(dtEndSale);
             tabAddSale.Controls.Add(dtBeginSale);
@@ -114,19 +115,26 @@
             tabAddSale.Controls.Add(lblInClub);
             tabAddSale.Controls.Add(nudPriceSale);
             tabAddSale.Controls.Add(lblPriceSale);
-            tabAddSale.Controls.Add(nudProductId);
             tabAddSale.Controls.Add(btnAddSale);
             tabAddSale.Controls.Add(nudMinQuantity);
             tabAddSale.Controls.Add(lblMinQuantity);
             tabAddSale.Controls.Add(lblProductIdForSale);
             tabAddSale.Location = new Point(4, 29);
             tabAddSale.Name = "tabAddSale";
-            tabAddSale.Padding = new Padding(3);
+            tabAddSale.Padding = new Padding(3, 3, 3, 3);
             tabAddSale.RightToLeft = RightToLeft.Yes;
-            tabAddSale.Size = new Size(707, 353);
+            tabAddSale.Size = new Size(707, 354);
             tabAddSale.TabIndex = 0;
             tabAddSale.Text = "הוספת מבצע";
             tabAddSale.UseVisualStyleBackColor = true;
+            // 
+            // nudProductId
+            // 
+            nudProductId.Location = new Point(357, 32);
+            nudProductId.Margin = new Padding(3, 4, 3, 4);
+            nudProductId.Name = "nudProductId";
+            nudProductId.Size = new Size(150, 27);
+            nudProductId.TabIndex = 14;
             // 
             // lblEndSale
             // 
@@ -139,7 +147,7 @@
             // 
             // dtEndSale
             // 
-            dtEndSale.Location = new Point(268, 250);
+            dtEndSale.Location = new Point(267, 251);
             dtEndSale.Name = "dtEndSale";
             dtEndSale.Size = new Size(238, 27);
             dtEndSale.TabIndex = 12;
@@ -193,7 +201,7 @@
             // 
             // nudPriceSale
             // 
-            nudPriceSale.Location = new Point(356, 122);
+            nudPriceSale.Location = new Point(357, 123);
             nudPriceSale.Maximum = new decimal(new int[] { 276447232, 23283, 0, 0 });
             nudPriceSale.Name = "nudPriceSale";
             nudPriceSale.Size = new Size(150, 27);
@@ -208,14 +216,6 @@
             lblPriceSale.TabIndex = 6;
             lblPriceSale.Text = "מחיר מבצע";
             // 
-            // nudProductId
-            // 
-            nudProductId.Location = new Point(355, 35);
-            nudProductId.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
-            nudProductId.Name = "nudProductId";
-            nudProductId.Size = new Size(150, 27);
-            nudProductId.TabIndex = 5;
-            // 
             // btnAddSale
             // 
             btnAddSale.Location = new Point(98, 264);
@@ -228,7 +228,7 @@
             // 
             // nudMinQuantity
             // 
-            nudMinQuantity.Location = new Point(356, 76);
+            nudMinQuantity.Location = new Point(357, 76);
             nudMinQuantity.Maximum = new decimal(new int[] { 1410065408, 2, 0, 0 });
             nudMinQuantity.Name = "nudMinQuantity";
             nudMinQuantity.Size = new Size(150, 27);
@@ -272,8 +272,8 @@
             tabUpdateSale.Controls.Add(lblProductIDtOUpdate);
             tabUpdateSale.Location = new Point(4, 29);
             tabUpdateSale.Name = "tabUpdateSale";
-            tabUpdateSale.Padding = new Padding(3);
-            tabUpdateSale.Size = new Size(707, 353);
+            tabUpdateSale.Padding = new Padding(3, 3, 3, 3);
+            tabUpdateSale.Size = new Size(707, 354);
             tabUpdateSale.TabIndex = 1;
             tabUpdateSale.Text = "עדכון מבצע";
             tabUpdateSale.UseVisualStyleBackColor = true;
@@ -306,7 +306,7 @@
             // 
             // dtNewEndSale
             // 
-            dtNewEndSale.Location = new Point(258, 290);
+            dtNewEndSale.Location = new Point(258, 291);
             dtNewEndSale.Name = "dtNewEndSale";
             dtNewEndSale.Size = new Size(238, 27);
             dtNewEndSale.TabIndex = 23;
@@ -360,7 +360,7 @@
             // 
             // nudNewPriceSale
             // 
-            nudNewPriceSale.Location = new Point(346, 162);
+            nudNewPriceSale.Location = new Point(346, 163);
             nudNewPriceSale.Maximum = new decimal(new int[] { -1530494976, 232830, 0, 0 });
             nudNewPriceSale.Name = "nudNewPriceSale";
             nudNewPriceSale.Size = new Size(150, 27);
@@ -394,7 +394,7 @@
             // 
             // nudProductIDtoUpdate
             // 
-            nudProductIDtoUpdate.Location = new Point(346, 70);
+            nudProductIDtoUpdate.Location = new Point(346, 69);
             nudProductIDtoUpdate.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudProductIDtoUpdate.Name = "nudProductIDtoUpdate";
             nudProductIDtoUpdate.Size = new Size(150, 27);
@@ -403,7 +403,7 @@
             // 
             // btnUpdateSale
             // 
-            btnUpdateSale.Location = new Point(76, 266);
+            btnUpdateSale.Location = new Point(75, 267);
             btnUpdateSale.Name = "btnUpdateSale";
             btnUpdateSale.Size = new Size(94, 29);
             btnUpdateSale.TabIndex = 2;
@@ -428,8 +428,8 @@
             tabDeleteSale.Controls.Add(lblCodetoDelete);
             tabDeleteSale.Location = new Point(4, 29);
             tabDeleteSale.Name = "tabDeleteSale";
-            tabDeleteSale.Padding = new Padding(3);
-            tabDeleteSale.Size = new Size(707, 353);
+            tabDeleteSale.Padding = new Padding(3, 3, 3, 3);
+            tabDeleteSale.Size = new Size(707, 354);
             tabDeleteSale.TabIndex = 2;
             tabDeleteSale.Text = "מחיקת מבצע";
             tabDeleteSale.UseVisualStyleBackColor = true;
@@ -455,7 +455,7 @@
             // lblCodetoDelete
             // 
             lblCodetoDelete.AutoSize = true;
-            lblCodetoDelete.Location = new Point(507, 78);
+            lblCodetoDelete.Location = new Point(507, 77);
             lblCodetoDelete.Name = "lblCodetoDelete";
             lblCodetoDelete.Size = new Size(113, 20);
             lblCodetoDelete.TabIndex = 11;
@@ -473,8 +473,8 @@
             tabDesineSales.Controls.Add(lblReadAll);
             tabDesineSales.Location = new Point(4, 29);
             tabDesineSales.Name = "tabDesineSales";
-            tabDesineSales.Padding = new Padding(3);
-            tabDesineSales.Size = new Size(707, 353);
+            tabDesineSales.Padding = new Padding(3, 3, 3, 3);
+            tabDesineSales.Size = new Size(707, 354);
             tabDesineSales.TabIndex = 3;
             tabDesineSales.Text = "הצגת מבצעים";
             tabDesineSales.UseVisualStyleBackColor = true;
@@ -533,7 +533,7 @@
             // lblReadAll
             // 
             lblReadAll.AutoSize = true;
-            lblReadAll.Location = new Point(155, 58);
+            lblReadAll.Location = new Point(155, 59);
             lblReadAll.Name = "lblReadAll";
             lblReadAll.Size = new Size(0, 20);
             lblReadAll.TabIndex = 0;
@@ -542,15 +542,16 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 451);
             Controls.Add(products);
             Name = "SaleMenu";
             Text = "SaleMenu";
+            Load += SaleMenu_Load;
             products.ResumeLayout(false);
             tabAddSale.ResumeLayout(false);
             tabAddSale.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nudPriceSale).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudProductId).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPriceSale).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudMinQuantity).EndInit();
             tabUpdateSale.ResumeLayout(false);
             tabUpdateSale.PerformLayout();
@@ -590,7 +591,6 @@
         private Button btnReadSale;
         private Label lblReadCodeSale;
         private Label lblReadAll;
-        private NumericUpDown nudProductId;
         private NumericUpDown nudPriceSale;
         private Label lblPriceSale;
         private RadioButton rbtnNoInClub;
@@ -614,5 +614,6 @@
         private NumericUpDown nudCodeSaleToUpdate;
         private Label lblCodeSaleToUpdate;
         private Label lblRadAllSales;
+        private NumericUpDown nudProductId;
     }
 }
