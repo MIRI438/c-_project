@@ -40,7 +40,7 @@
     <ProductName>קרם לחות</ProductName>
     <Category>טיפוח_אישי</Category>
     <Price>50</Price>
-    <QuantityInStock>96</QuantityInStock>
+    <QuantityInStock>88</QuantityInStock>
   </Product>
   <Product>
     <Id>179</Id>
@@ -48,5 +48,19 @@
     <Category>משקאות</Category>
     <Price>45</Price>
     <QuantityInStock>66</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>180</Id>
+    <ProductName>משקה תפוחי עץ</ProductName>
+    <Category>משקאות</Category>
+    <Price>36</Price>
+    <QuantityInStock>98</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>181</Id>
+    <ProductName>בושם נשים</ProductName>
+    <Category>משקאות</Category>
+    <Price>100</Price>
+    <QuantityInStock>25</QuantityInStock>
   </Product>
 </ArrayOfProduct>

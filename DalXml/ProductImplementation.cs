@@ -90,6 +90,7 @@ namespace Dal
             }
             catch (Exception e)
             {
+                Console.Error.WriteLine($"Error in ReadAll xml: {e.Message}"); // כתיבה לקונסול לשם דיבוג
                 throw new Exception("Error in ReadAll xml: " + e.Message, e);
             }
         }

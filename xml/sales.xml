@@ -1,69 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSale>
   <Sale>
-    <Code>110</Code>
-    <ProductId>32</ProductId>
-    <MinQuantity>3</MinQuantity>
-    <Price>300</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-06T15:06:04.1632347+03:00</BeginSale>
-    <EndSale>2025-05-14T15:06:04.1632374+03:00</EndSale>
-  </Sale>
-  <Sale>
-    <Code>111</Code>
-    <ProductId>245</ProductId>
-    <MinQuantity>2</MinQuantity>
-    <Price>140</Price>
-    <InClab>false</InClab>
-    <BeginSale>2025-05-06T15:06:04.1701853+03:00</BeginSale>
-    <EndSale>2025-05-12T15:06:04.170195+03:00</EndSale>
-  </Sale>
-  <Sale>
-    <Code>112</Code>
-    <ProductId>32</ProductId>
-    <MinQuantity>3</MinQuantity>
-    <Price>300</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-06T15:06:31.4481914+03:00</BeginSale>
-    <EndSale>2025-05-14T15:06:31.4481934+03:00</EndSale>
-  </Sale>
-  <Sale>
-    <Code>116</Code>
-    <ProductId>154</ProductId>
-    <MinQuantity>4</MinQuantity>
-    <Price>250</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-11T16:46:14.2503178+03:00</BeginSale>
-    <EndSale>2025-05-29T16:46:14.23</EndSale>
-  </Sale>
-  <Sale>
-    <Code>117</Code>
-    <ProductId>133</ProductId>
-    <MinQuantity>2</MinQuantity>
-    <Price>100</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-11T16:48:12.6134183+03:00</BeginSale>
-    <EndSale>2025-06-04T16:48:12.609</EndSale>
-  </Sale>
-  <Sale>
-    <Code>118</Code>
-    <ProductId>117</ProductId>
-    <MinQuantity>156</MinQuantity>
-    <Price>2</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-11T16:51:17.9780621+03:00</BeginSale>
-    <EndSale>2025-05-29T16:51:17.966</EndSale>
-  </Sale>
-  <Sale>
-    <Code>120</Code>
-    <ProductId>158</ProductId>
-    <MinQuantity>2</MinQuantity>
-    <Price>30</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-11T16:59:22.2569887+03:00</BeginSale>
-    <EndSale>2025-05-29T16:59:22.246</EndSale>
-  </Sale>
-  <Sale>
     <Code>121</Code>
     <name>SaleMenu</name>
     <MinQuantity>3</MinQuantity>
@@ -73,21 +10,21 @@
     <EndSale>2025-05-13T14:45:24.2707589+03:00</EndSale>
   </Sale>
   <Sale>
-    <Code>122</Code>
-    <ProductId>100</ProductId>
+    <Code>126</Code>
+    <ProductId>178</ProductId>
     <MinQuantity>3</MinQuantity>
-    <Price>150</Price>
+    <Price>120</Price>
     <InClab>true</InClab>
-    <BeginSale>2025-05-18T16:19:07.2047649+03:00</BeginSale>
-    <EndSale>2025-05-28T16:19:07.189</EndSale>
+    <BeginSale>2025-05-25T15:59:02.231542+03:00</BeginSale>
+    <EndSale>2025-05-28T15:59:02.229</EndSale>
   </Sale>
   <Sale>
-    <Code>125</Code>
-    <ProductId>179</ProductId>
-    <MinQuantity>2</MinQuantity>
-    <Price>80</Price>
-    <InClab>true</InClab>
-    <BeginSale>2025-05-18T18:23:50.1360874+03:00</BeginSale>
-    <EndSale>2025-05-29T18:23:50.124</EndSale>
+    <Code>127</Code>
+    <ProductId>181</ProductId>
+    <MinQuantity>5</MinQuantity>
+    <Price>400</Price>
+    <InClab>false</InClab>
+    <BeginSale>2025-05-27T02:19:27.5270774+03:00</BeginSale>
+    <EndSale>2025-05-31T02:19:27.52</EndSale>
   </Sale>
 </ArrayOfSale>

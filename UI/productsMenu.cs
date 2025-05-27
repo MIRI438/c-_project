@@ -29,7 +29,7 @@ namespace UI
                 BL.BO.Product product = new BL.BO.Product();
                 product.ProductName = tbxNameProduct.Text;
                 product.Price = (double)nudPrice.Value;
-                product.Category = "משקאות";
+                product.Category = cbxCategory.SelectedIndex.ToString();
                 product.QuantityInStock = (int)nudQuantityInStock.Value;
                 _bl.Product.Create(product);
                 readAll();
@@ -55,7 +55,7 @@ namespace UI
                 product.Id = (int)nudID.Value;
                 product.ProductName = txtNewName.Text;
                 product.Price = (double)nudNewPrice.Value;
-                product.Category = "משקאות";
+                product.Category = cbxCategory.SelectedIndex.ToString();
                 product.QuantityInStock = (int)nudNewQuantityInStock.Value;
 
                 _bl.Product.Update(product);
@@ -114,6 +114,16 @@ namespace UI
 
         private void btnRead_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void tabDesine_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudRead_ValueChanged(object sender, EventArgs e)
+        {
             BL.BO.Product p = _bl.Product.Read((int)nudRead.Value);
             MessageBox.Show($"ID: {p.Id}\n" +
                     $"Name: {p.ProductName}\n" +
@@ -123,7 +133,7 @@ namespace UI
                     "-----------------------------");
         }
 
-        private void tabDesine_Click(object sender, EventArgs e)
+        private void cbxCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

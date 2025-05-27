@@ -23,7 +23,7 @@ namespace UI
                 {
                     order.IsPreferredCustomer = true;
                     Login.customer = _bl.Customer.Read(Login.customer.Id);
-                    
+
                     lblHello.Text = $"!שלום {Login.customer.Name}";
                 }
                 else
@@ -75,7 +75,7 @@ namespace UI
             bindingSource.DataSource = order.Products;
             dgvOrderProducts.DataSource = bindingSource;
 
-            lblTotalPrice.Text = order.TotalPrice == null ? $"סה\"כ לתשלום: 00 ":  $"סה\"כ לתשלום: {order.TotalPrice}";
+            lblTotalPrice.Text = order.TotalPrice == null ? $"סה\"כ לתשלום: 00 " : $"סה\"כ לתשלום: {order.TotalPrice}";
         }
 
 
@@ -131,6 +131,11 @@ namespace UI
             {
                 MessageBox.Show($"שגיאה בסיום ההזמנה: {ex.Message}");
             }
+        }
+
+        private void txtNameToAdd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

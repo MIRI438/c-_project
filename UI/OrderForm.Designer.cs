@@ -109,6 +109,7 @@
             txtNameToAdd.Name = "txtNameToAdd";
             txtNameToAdd.Size = new Size(120, 23);
             txtNameToAdd.TabIndex = 10;
+            txtNameToAdd.TextChanged += txtNameToAdd_TextChanged;
             // 
             // lblHello
             // 

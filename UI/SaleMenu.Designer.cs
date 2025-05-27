@@ -101,7 +101,7 @@
             products.RightToLeft = RightToLeft.No;
             products.RightToLeftLayout = true;
             products.SelectedIndex = 0;
-            products.Size = new Size(626, 290);
+            products.Size = new Size(1097, 546);
             products.TabIndex = 3;
             // 
             // tabAddSale
@@ -125,14 +125,14 @@
             tabAddSale.Name = "tabAddSale";
             tabAddSale.Padding = new Padding(3, 2, 3, 2);
             tabAddSale.RightToLeft = RightToLeft.Yes;
-            tabAddSale.Size = new Size(618, 262);
+            tabAddSale.Size = new Size(1089, 518);
             tabAddSale.TabIndex = 0;
             tabAddSale.Text = "הוספת מבצע";
             tabAddSale.UseVisualStyleBackColor = true;
             // 
             // nudProductId
             // 
-            nudProductId.Location = new Point(312, 24);
+            nudProductId.Location = new Point(665, 88);
             nudProductId.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
             nudProductId.Name = "nudProductId";
             nudProductId.Size = new Size(131, 23);
@@ -141,7 +141,7 @@
             // lblEndSale
             // 
             lblEndSale.AutoSize = true;
-            lblEndSale.Location = new Point(451, 191);
+            lblEndSale.Location = new Point(804, 255);
             lblEndSale.Name = "lblEndSale";
             lblEndSale.Size = new Size(112, 15);
             lblEndSale.TabIndex = 13;
@@ -149,7 +149,7 @@
             // 
             // dtEndSale
             // 
-            dtEndSale.Location = new Point(234, 188);
+            dtEndSale.Location = new Point(587, 252);
             dtEndSale.Margin = new Padding(3, 2, 3, 2);
             dtEndSale.Name = "dtEndSale";
             dtEndSale.Size = new Size(209, 23);
@@ -157,7 +157,7 @@
             // 
             // dtBeginSale
             // 
-            dtBeginSale.Location = new Point(234, 154);
+            dtBeginSale.Location = new Point(587, 218);
             dtBeginSale.Margin = new Padding(3, 2, 3, 2);
             dtBeginSale.Name = "dtBeginSale";
             dtBeginSale.Size = new Size(209, 23);
@@ -166,7 +166,7 @@
             // lblBeginSale
             // 
             lblBeginSale.AutoSize = true;
-            lblBeginSale.Location = new Point(451, 154);
+            lblBeginSale.Location = new Point(804, 218);
             lblBeginSale.Name = "lblBeginSale";
             lblBeginSale.Size = new Size(125, 15);
             lblBeginSale.TabIndex = 10;
@@ -175,7 +175,7 @@
             // rbtnNoInClub
             // 
             rbtnNoInClub.AutoSize = true;
-            rbtnNoInClub.Location = new Point(401, 122);
+            rbtnNoInClub.Location = new Point(754, 186);
             rbtnNoInClub.Margin = new Padding(3, 2, 3, 2);
             rbtnNoInClub.Name = "rbtnNoInClub";
             rbtnNoInClub.Size = new Size(40, 19);
@@ -187,7 +187,7 @@
             // rbtYesInClub
             // 
             rbtYesInClub.AutoSize = true;
-            rbtYesInClub.Location = new Point(311, 122);
+            rbtYesInClub.Location = new Point(664, 186);
             rbtYesInClub.Margin = new Padding(3, 2, 3, 2);
             rbtYesInClub.Name = "rbtYesInClub";
             rbtYesInClub.Size = new Size(35, 19);
@@ -199,7 +199,7 @@
             // lblInClub
             // 
             lblInClub.AutoSize = true;
-            lblInClub.Location = new Point(451, 122);
+            lblInClub.Location = new Point(804, 186);
             lblInClub.Name = "lblInClub";
             lblInClub.Size = new Size(127, 15);
             lblInClub.TabIndex = 8;
@@ -207,7 +207,7 @@
             // 
             // nudPriceSale
             // 
-            nudPriceSale.Location = new Point(312, 92);
+            nudPriceSale.Location = new Point(665, 156);
             nudPriceSale.Margin = new Padding(3, 2, 3, 2);
             nudPriceSale.Maximum = new decimal(new int[] { 276447232, 23283, 0, 0 });
             nudPriceSale.Name = "nudPriceSale";
@@ -217,7 +217,7 @@
             // lblPriceSale
             // 
             lblPriceSale.AutoSize = true;
-            lblPriceSale.Location = new Point(451, 95);
+            lblPriceSale.Location = new Point(804, 159);
             lblPriceSale.Name = "lblPriceSale";
             lblPriceSale.Size = new Size(65, 15);
             lblPriceSale.TabIndex = 6;
@@ -225,7 +225,7 @@
             // 
             // btnAddSale
             // 
-            btnAddSale.Location = new Point(86, 198);
+            btnAddSale.Location = new Point(533, 387);
             btnAddSale.Margin = new Padding(3, 2, 3, 2);
             btnAddSale.Name = "btnAddSale";
             btnAddSale.Size = new Size(82, 22);
@@ -236,7 +236,7 @@
             // 
             // nudMinQuantity
             // 
-            nudMinQuantity.Location = new Point(312, 57);
+            nudMinQuantity.Location = new Point(665, 121);
             nudMinQuantity.Margin = new Padding(3, 2, 3, 2);
             nudMinQuantity.Maximum = new decimal(new int[] { 1410065408, 2, 0, 0 });
             nudMinQuantity.Name = "nudMinQuantity";
@@ -246,7 +246,7 @@
             // lblMinQuantity
             // 
             lblMinQuantity.AutoSize = true;
-            lblMinQuantity.Location = new Point(451, 61);
+            lblMinQuantity.Location = new Point(804, 125);
             lblMinQuantity.Name = "lblMinQuantity";
             lblMinQuantity.Size = new Size(119, 15);
             lblMinQuantity.TabIndex = 0;
@@ -255,7 +255,7 @@
             // lblProductIdForSale
             // 
             lblProductIdForSale.AutoSize = true;
-            lblProductIdForSale.Location = new Point(451, 26);
+            lblProductIdForSale.Location = new Point(804, 90);
             lblProductIdForSale.Name = "lblProductIdForSale";
             lblProductIdForSale.Size = new Size(52, 15);
             lblProductIdForSale.TabIndex = 0;
@@ -283,14 +283,14 @@
             tabUpdateSale.Margin = new Padding(3, 2, 3, 2);
             tabUpdateSale.Name = "tabUpdateSale";
             tabUpdateSale.Padding = new Padding(3, 2, 3, 2);
-            tabUpdateSale.Size = new Size(618, 262);
+            tabUpdateSale.Size = new Size(1089, 518);
             tabUpdateSale.TabIndex = 1;
             tabUpdateSale.Text = "עדכון מבצע";
             tabUpdateSale.UseVisualStyleBackColor = true;
             // 
             // nudCodeSaleToUpdate
             // 
-            nudCodeSaleToUpdate.Location = new Point(303, 19);
+            nudCodeSaleToUpdate.Location = new Point(684, 85);
             nudCodeSaleToUpdate.Margin = new Padding(3, 2, 3, 2);
             nudCodeSaleToUpdate.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudCodeSaleToUpdate.Name = "nudCodeSaleToUpdate";
@@ -300,7 +300,7 @@
             // lblCodeSaleToUpdate
             // 
             lblCodeSaleToUpdate.AutoSize = true;
-            lblCodeSaleToUpdate.Location = new Point(443, 20);
+            lblCodeSaleToUpdate.Location = new Point(824, 86);
             lblCodeSaleToUpdate.Name = "lblCodeSaleToUpdate";
             lblCodeSaleToUpdate.Size = new Size(81, 15);
             lblCodeSaleToUpdate.TabIndex = 25;
@@ -309,7 +309,7 @@
             // lblNewEndSale
             // 
             lblNewEndSale.AutoSize = true;
-            lblNewEndSale.Location = new Point(442, 221);
+            lblNewEndSale.Location = new Point(823, 287);
             lblNewEndSale.Name = "lblNewEndSale";
             lblNewEndSale.Size = new Size(112, 15);
             lblNewEndSale.TabIndex = 24;
@@ -317,7 +317,7 @@
             // 
             // dtNewEndSale
             // 
-            dtNewEndSale.Location = new Point(226, 218);
+            dtNewEndSale.Location = new Point(607, 284);
             dtNewEndSale.Margin = new Padding(3, 2, 3, 2);
             dtNewEndSale.Name = "dtNewEndSale";
             dtNewEndSale.Size = new Size(209, 23);
@@ -325,7 +325,7 @@
             // 
             // dtNewStartSale
             // 
-            dtNewStartSale.Location = new Point(225, 184);
+            dtNewStartSale.Location = new Point(606, 250);
             dtNewStartSale.Margin = new Padding(3, 2, 3, 2);
             dtNewStartSale.Name = "dtNewStartSale";
             dtNewStartSale.Size = new Size(209, 23);
@@ -334,7 +334,7 @@
             // lblNewStartSale
             // 
             lblNewStartSale.AutoSize = true;
-            lblNewStartSale.Location = new Point(442, 184);
+            lblNewStartSale.Location = new Point(823, 250);
             lblNewStartSale.Name = "lblNewStartSale";
             lblNewStartSale.Size = new Size(125, 15);
             lblNewStartSale.TabIndex = 21;
@@ -343,7 +343,7 @@
             // rbtnNewNo
             // 
             rbtnNewNo.AutoSize = true;
-            rbtnNewNo.Location = new Point(392, 152);
+            rbtnNewNo.Location = new Point(773, 218);
             rbtnNewNo.Margin = new Padding(3, 2, 3, 2);
             rbtnNewNo.Name = "rbtnNewNo";
             rbtnNewNo.Size = new Size(40, 19);
@@ -355,7 +355,7 @@
             // rbtnNewYes
             // 
             rbtnNewYes.AutoSize = true;
-            rbtnNewYes.Location = new Point(302, 152);
+            rbtnNewYes.Location = new Point(683, 218);
             rbtnNewYes.Margin = new Padding(3, 2, 3, 2);
             rbtnNewYes.Name = "rbtnNewYes";
             rbtnNewYes.Size = new Size(35, 19);
@@ -367,7 +367,7 @@
             // lblNewInClub
             // 
             lblNewInClub.AutoSize = true;
-            lblNewInClub.Location = new Point(442, 152);
+            lblNewInClub.Location = new Point(823, 218);
             lblNewInClub.Name = "lblNewInClub";
             lblNewInClub.Size = new Size(127, 15);
             lblNewInClub.TabIndex = 18;
@@ -375,7 +375,7 @@
             // 
             // nudNewPriceSale
             // 
-            nudNewPriceSale.Location = new Point(303, 122);
+            nudNewPriceSale.Location = new Point(684, 188);
             nudNewPriceSale.Margin = new Padding(3, 2, 3, 2);
             nudNewPriceSale.Maximum = new decimal(new int[] { -1530494976, 232830, 0, 0 });
             nudNewPriceSale.Name = "nudNewPriceSale";
@@ -385,7 +385,7 @@
             // lblNewPriceSale
             // 
             lblNewPriceSale.AutoSize = true;
-            lblNewPriceSale.Location = new Point(442, 125);
+            lblNewPriceSale.Location = new Point(823, 191);
             lblNewPriceSale.Name = "lblNewPriceSale";
             lblNewPriceSale.Size = new Size(65, 15);
             lblNewPriceSale.TabIndex = 16;
@@ -393,7 +393,7 @@
             // 
             // nudNewMinQantity
             // 
-            nudNewMinQantity.Location = new Point(303, 87);
+            nudNewMinQantity.Location = new Point(684, 153);
             nudNewMinQantity.Margin = new Padding(3, 2, 3, 2);
             nudNewMinQantity.Maximum = new decimal(new int[] { 1316134912, 2328, 0, 0 });
             nudNewMinQantity.Name = "nudNewMinQantity";
@@ -403,7 +403,7 @@
             // lblNewMinQentity
             // 
             lblNewMinQentity.AutoSize = true;
-            lblNewMinQentity.Location = new Point(442, 91);
+            lblNewMinQentity.Location = new Point(823, 157);
             lblNewMinQentity.Name = "lblNewMinQentity";
             lblNewMinQentity.Size = new Size(119, 15);
             lblNewMinQentity.TabIndex = 14;
@@ -411,7 +411,7 @@
             // 
             // nudProductIDtoUpdate
             // 
-            nudProductIDtoUpdate.Location = new Point(303, 52);
+            nudProductIDtoUpdate.Location = new Point(684, 118);
             nudProductIDtoUpdate.Margin = new Padding(3, 2, 3, 2);
             nudProductIDtoUpdate.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudProductIDtoUpdate.Name = "nudProductIDtoUpdate";
@@ -421,7 +421,7 @@
             // 
             // btnUpdateSale
             // 
-            btnUpdateSale.Location = new Point(66, 200);
+            btnUpdateSale.Location = new Point(554, 380);
             btnUpdateSale.Margin = new Padding(3, 2, 3, 2);
             btnUpdateSale.Name = "btnUpdateSale";
             btnUpdateSale.Size = new Size(82, 22);
@@ -433,7 +433,7 @@
             // lblProductIDtOUpdate
             // 
             lblProductIDtOUpdate.AutoSize = true;
-            lblProductIDtOUpdate.Location = new Point(443, 54);
+            lblProductIDtOUpdate.Location = new Point(824, 120);
             lblProductIDtOUpdate.Name = "lblProductIDtOUpdate";
             lblProductIDtOUpdate.Size = new Size(52, 15);
             lblProductIDtOUpdate.TabIndex = 0;
@@ -449,14 +449,14 @@
             tabDeleteSale.Margin = new Padding(3, 2, 3, 2);
             tabDeleteSale.Name = "tabDeleteSale";
             tabDeleteSale.Padding = new Padding(3, 2, 3, 2);
-            tabDeleteSale.Size = new Size(618, 262);
+            tabDeleteSale.Size = new Size(1089, 518);
             tabDeleteSale.TabIndex = 2;
             tabDeleteSale.Text = "מחיקת מבצע";
             tabDeleteSale.UseVisualStyleBackColor = true;
             // 
             // btnDeleteSale
             // 
-            btnDeleteSale.Location = new Point(105, 191);
+            btnDeleteSale.Location = new Point(530, 338);
             btnDeleteSale.Margin = new Padding(3, 2, 3, 2);
             btnDeleteSale.Name = "btnDeleteSale";
             btnDeleteSale.Size = new Size(82, 22);
@@ -467,7 +467,7 @@
             // 
             // nudCodetoDelete
             // 
-            nudCodetoDelete.Location = new Point(292, 55);
+            nudCodetoDelete.Location = new Point(689, 127);
             nudCodetoDelete.Margin = new Padding(3, 2, 3, 2);
             nudCodetoDelete.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudCodetoDelete.Name = "nudCodetoDelete";
@@ -477,7 +477,7 @@
             // lblCodetoDelete
             // 
             lblCodetoDelete.AutoSize = true;
-            lblCodetoDelete.Location = new Point(444, 58);
+            lblCodetoDelete.Location = new Point(841, 130);
             lblCodetoDelete.Name = "lblCodetoDelete";
             lblCodetoDelete.Size = new Size(90, 15);
             lblCodetoDelete.TabIndex = 11;
@@ -497,7 +497,7 @@
             tabDesineSales.Margin = new Padding(3, 2, 3, 2);
             tabDesineSales.Name = "tabDesineSales";
             tabDesineSales.Padding = new Padding(3, 2, 3, 2);
-            tabDesineSales.Size = new Size(618, 262);
+            tabDesineSales.Size = new Size(1089, 518);
             tabDesineSales.TabIndex = 3;
             tabDesineSales.Text = "הצגת מבצעים";
             tabDesineSales.UseVisualStyleBackColor = true;
@@ -528,7 +528,7 @@
             // 
             // nudReadCodeSale
             // 
-            nudReadCodeSale.Location = new Point(325, 38);
+            nudReadCodeSale.Location = new Point(706, 142);
             nudReadCodeSale.Margin = new Padding(3, 2, 3, 2);
             nudReadCodeSale.Maximum = new decimal(new int[] { 1410065408, 2, 0, 0 });
             nudReadCodeSale.Name = "nudReadCodeSale";
@@ -537,7 +537,7 @@
             // 
             // btnReadSale
             // 
-            btnReadSale.Location = new Point(490, 80);
+            btnReadSale.Location = new Point(513, 381);
             btnReadSale.Margin = new Padding(3, 2, 3, 2);
             btnReadSale.Name = "btnReadSale";
             btnReadSale.Size = new Size(82, 22);
@@ -549,7 +549,7 @@
             // lblReadCodeSale
             // 
             lblReadCodeSale.AutoSize = true;
-            lblReadCodeSale.Location = new Point(461, 40);
+            lblReadCodeSale.Location = new Point(842, 144);
             lblReadCodeSale.Name = "lblReadCodeSale";
             lblReadCodeSale.Size = new Size(105, 15);
             lblReadCodeSale.TabIndex = 1;
@@ -567,7 +567,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(1181, 616);
             Controls.Add(products);
             Margin = new Padding(3, 2, 3, 2);
             Name = "SaleMenu";

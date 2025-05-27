@@ -54,12 +54,12 @@
             nudIDtoDeleteCustomer = new NumericUpDown();
             lblIDtoDeleteCustomer = new Label();
             tabDesineCustomers = new TabPage();
+            lblReadAllCustomers = new Label();
             lblReadNew = new Label();
             nudReadCustomer = new NumericUpDown();
             btnRead = new Button();
             lblReadCustomer = new Label();
             lblReadAll = new Label();
-            lblReadAllCustomers = new Label();
             products.SuspendLayout();
             tabAddCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudIDCustomer).BeginInit();
@@ -79,12 +79,13 @@
             products.Controls.Add(tabUpdateCustomer);
             products.Controls.Add(tabDeleteCustomer);
             products.Controls.Add(tabDesineCustomers);
-            products.Location = new Point(43, 32);
+            products.Location = new Point(38, 24);
+            products.Margin = new Padding(3, 2, 3, 2);
             products.Name = "products";
             products.RightToLeft = RightToLeft.No;
             products.RightToLeftLayout = true;
             products.SelectedIndex = 0;
-            products.Size = new Size(715, 386);
+            products.Size = new Size(1091, 559);
             products.TabIndex = 3;
             // 
             // tabAddCustomer
@@ -98,36 +99,39 @@
             tabAddCustomer.Controls.Add(lblDCustomer);
             tabAddCustomer.Controls.Add(lblPhoneCustomer);
             tabAddCustomer.Controls.Add(lblNameCustomer);
-            tabAddCustomer.Location = new Point(4, 29);
+            tabAddCustomer.Location = new Point(4, 24);
+            tabAddCustomer.Margin = new Padding(3, 2, 3, 2);
             tabAddCustomer.Name = "tabAddCustomer";
-            tabAddCustomer.Padding = new Padding(3);
+            tabAddCustomer.Padding = new Padding(3, 2, 3, 2);
             tabAddCustomer.RightToLeft = RightToLeft.Yes;
-            tabAddCustomer.Size = new Size(707, 353);
+            tabAddCustomer.Size = new Size(1083, 531);
             tabAddCustomer.TabIndex = 0;
             tabAddCustomer.Text = "הוספת לקוח";
             tabAddCustomer.UseVisualStyleBackColor = true;
             // 
             // txtAddressCustomer
             // 
-            txtAddressCustomer.Location = new Point(385, 144);
+            txtAddressCustomer.Location = new Point(675, 162);
+            txtAddressCustomer.Margin = new Padding(3, 2, 3, 2);
             txtAddressCustomer.Name = "txtAddressCustomer";
-            txtAddressCustomer.Size = new Size(151, 27);
+            txtAddressCustomer.Size = new Size(133, 23);
             txtAddressCustomer.TabIndex = 6;
             // 
             // lblAddressCustomer
             // 
             lblAddressCustomer.AutoSize = true;
-            lblAddressCustomer.Location = new Point(545, 147);
+            lblAddressCustomer.Location = new Point(815, 164);
             lblAddressCustomer.Name = "lblAddressCustomer";
-            lblAddressCustomer.Size = new Size(52, 20);
+            lblAddressCustomer.Size = new Size(42, 15);
             lblAddressCustomer.TabIndex = 5;
             lblAddressCustomer.Text = "כתובת";
             // 
             // btnAddCustomer
             // 
-            btnAddCustomer.Location = new Point(98, 264);
+            btnAddCustomer.Location = new Point(514, 345);
+            btnAddCustomer.Margin = new Padding(3, 2, 3, 2);
             btnAddCustomer.Name = "btnAddCustomer";
-            btnAddCustomer.Size = new Size(94, 29);
+            btnAddCustomer.Size = new Size(82, 22);
             btnAddCustomer.TabIndex = 4;
             btnAddCustomer.Text = "הוספה";
             btnAddCustomer.UseVisualStyleBackColor = true;
@@ -135,51 +139,54 @@
             // 
             // nudIDCustomer
             // 
-            nudIDCustomer.Location = new Point(385, 55);
+            nudIDCustomer.Location = new Point(675, 95);
+            nudIDCustomer.Margin = new Padding(3, 2, 3, 2);
             nudIDCustomer.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudIDCustomer.Name = "nudIDCustomer";
-            nudIDCustomer.Size = new Size(150, 27);
+            nudIDCustomer.Size = new Size(131, 23);
             nudIDCustomer.TabIndex = 2;
             // 
             // nudPhoneCustomer
             // 
-            nudPhoneCustomer.Location = new Point(385, 193);
+            nudPhoneCustomer.Location = new Point(675, 199);
+            nudPhoneCustomer.Margin = new Padding(3, 2, 3, 2);
             nudPhoneCustomer.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudPhoneCustomer.Name = "nudPhoneCustomer";
-            nudPhoneCustomer.Size = new Size(150, 27);
+            nudPhoneCustomer.Size = new Size(131, 23);
             nudPhoneCustomer.TabIndex = 2;
             // 
             // tbxNameCustomer
             // 
-            tbxNameCustomer.Location = new Point(385, 99);
+            tbxNameCustomer.Location = new Point(675, 128);
+            tbxNameCustomer.Margin = new Padding(3, 2, 3, 2);
             tbxNameCustomer.Name = "tbxNameCustomer";
-            tbxNameCustomer.Size = new Size(151, 27);
+            tbxNameCustomer.Size = new Size(133, 23);
             tbxNameCustomer.TabIndex = 1;
             // 
             // lblDCustomer
             // 
             lblDCustomer.AutoSize = true;
-            lblDCustomer.Location = new Point(545, 57);
+            lblDCustomer.Location = new Point(815, 97);
             lblDCustomer.Name = "lblDCustomer";
-            lblDCustomer.Size = new Size(85, 20);
+            lblDCustomer.Size = new Size(68, 15);
             lblDCustomer.TabIndex = 0;
             lblDCustomer.Text = "תעודת זהות";
             // 
             // lblPhoneCustomer
             // 
             lblPhoneCustomer.AutoSize = true;
-            lblPhoneCustomer.Location = new Point(541, 195);
+            lblPhoneCustomer.Location = new Point(811, 200);
             lblPhoneCustomer.Name = "lblPhoneCustomer";
-            lblPhoneCustomer.Size = new Size(94, 20);
+            lblPhoneCustomer.Size = new Size(78, 15);
             lblPhoneCustomer.TabIndex = 0;
             lblPhoneCustomer.Text = "מספר פלאפון";
             // 
             // lblNameCustomer
             // 
             lblNameCustomer.AutoSize = true;
-            lblNameCustomer.Location = new Point(545, 102);
+            lblNameCustomer.Location = new Point(815, 130);
             lblNameCustomer.Name = "lblNameCustomer";
-            lblNameCustomer.Size = new Size(67, 20);
+            lblNameCustomer.Size = new Size(53, 15);
             lblNameCustomer.TabIndex = 0;
             lblNameCustomer.Text = "שם לקוח";
             // 
@@ -194,76 +201,82 @@
             tabUpdateCustomer.Controls.Add(lblNewNameCustomer);
             tabUpdateCustomer.Controls.Add(btnUpdateCustomer);
             tabUpdateCustomer.Controls.Add(lblIDCustomerToUpdate);
-            tabUpdateCustomer.Location = new Point(4, 29);
+            tabUpdateCustomer.Location = new Point(4, 24);
+            tabUpdateCustomer.Margin = new Padding(3, 2, 3, 2);
             tabUpdateCustomer.Name = "tabUpdateCustomer";
-            tabUpdateCustomer.Padding = new Padding(3);
-            tabUpdateCustomer.Size = new Size(707, 353);
+            tabUpdateCustomer.Padding = new Padding(3, 2, 3, 2);
+            tabUpdateCustomer.Size = new Size(1083, 531);
             tabUpdateCustomer.TabIndex = 1;
             tabUpdateCustomer.Text = "עדכון לקוח";
             tabUpdateCustomer.UseVisualStyleBackColor = true;
             // 
             // nudNewPhoneCustomer
             // 
-            nudNewPhoneCustomer.Location = new Point(335, 206);
+            nudNewPhoneCustomer.Location = new Point(668, 212);
+            nudNewPhoneCustomer.Margin = new Padding(3, 2, 3, 2);
             nudNewPhoneCustomer.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudNewPhoneCustomer.Name = "nudNewPhoneCustomer";
-            nudNewPhoneCustomer.Size = new Size(150, 27);
+            nudNewPhoneCustomer.Size = new Size(131, 23);
             nudNewPhoneCustomer.TabIndex = 12;
             // 
             // lblNewPhoneCustomer
             // 
             lblNewPhoneCustomer.AutoSize = true;
-            lblNewPhoneCustomer.Location = new Point(496, 208);
+            lblNewPhoneCustomer.Location = new Point(809, 214);
             lblNewPhoneCustomer.Name = "lblNewPhoneCustomer";
-            lblNewPhoneCustomer.Size = new Size(127, 20);
+            lblNewPhoneCustomer.Size = new Size(104, 15);
             lblNewPhoneCustomer.TabIndex = 11;
             lblNewPhoneCustomer.Text = "מספר פלאפון חדש";
             // 
             // lblNewAddressCustomer
             // 
             lblNewAddressCustomer.AutoSize = true;
-            lblNewAddressCustomer.Location = new Point(496, 162);
+            lblNewAddressCustomer.Location = new Point(809, 180);
             lblNewAddressCustomer.Name = "lblNewAddressCustomer";
-            lblNewAddressCustomer.Size = new Size(95, 20);
+            lblNewAddressCustomer.Size = new Size(76, 15);
             lblNewAddressCustomer.TabIndex = 11;
             lblNewAddressCustomer.Text = "כתובת חדשה";
             // 
             // nudIDCustomerToUpdate
             // 
-            nudIDCustomerToUpdate.Location = new Point(334, 73);
+            nudIDCustomerToUpdate.Location = new Point(667, 113);
+            nudIDCustomerToUpdate.Margin = new Padding(3, 2, 3, 2);
             nudIDCustomerToUpdate.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudIDCustomerToUpdate.Name = "nudIDCustomerToUpdate";
-            nudIDCustomerToUpdate.Size = new Size(150, 27);
+            nudIDCustomerToUpdate.Size = new Size(131, 23);
             nudIDCustomerToUpdate.TabIndex = 10;
             // 
             // txtNewAddressCustomer
             // 
-            txtNewAddressCustomer.Location = new Point(333, 159);
+            txtNewAddressCustomer.Location = new Point(666, 177);
+            txtNewAddressCustomer.Margin = new Padding(3, 2, 3, 2);
             txtNewAddressCustomer.Name = "txtNewAddressCustomer";
-            txtNewAddressCustomer.Size = new Size(151, 27);
+            txtNewAddressCustomer.Size = new Size(133, 23);
             txtNewAddressCustomer.TabIndex = 8;
             // 
             // txtNewNameCustomer
             // 
-            txtNewNameCustomer.Location = new Point(334, 113);
+            txtNewNameCustomer.Location = new Point(667, 143);
+            txtNewNameCustomer.Margin = new Padding(3, 2, 3, 2);
             txtNewNameCustomer.Name = "txtNewNameCustomer";
-            txtNewNameCustomer.Size = new Size(151, 27);
+            txtNewNameCustomer.Size = new Size(133, 23);
             txtNewNameCustomer.TabIndex = 8;
             // 
             // lblNewNameCustomer
             // 
             lblNewNameCustomer.AutoSize = true;
-            lblNewNameCustomer.Location = new Point(494, 116);
+            lblNewNameCustomer.Location = new Point(807, 145);
             lblNewNameCustomer.Name = "lblNewNameCustomer";
-            lblNewNameCustomer.Size = new Size(64, 20);
+            lblNewNameCustomer.Size = new Size(50, 15);
             lblNewNameCustomer.TabIndex = 7;
             lblNewNameCustomer.Text = "שם חדש";
             // 
             // btnUpdateCustomer
             // 
-            btnUpdateCustomer.Location = new Point(76, 266);
+            btnUpdateCustomer.Location = new Point(534, 350);
+            btnUpdateCustomer.Margin = new Padding(3, 2, 3, 2);
             btnUpdateCustomer.Name = "btnUpdateCustomer";
-            btnUpdateCustomer.Size = new Size(94, 29);
+            btnUpdateCustomer.Size = new Size(82, 22);
             btnUpdateCustomer.TabIndex = 2;
             btnUpdateCustomer.Text = "עדכון";
             btnUpdateCustomer.UseVisualStyleBackColor = true;
@@ -272,9 +285,9 @@
             // lblIDCustomerToUpdate
             // 
             lblIDCustomerToUpdate.AutoSize = true;
-            lblIDCustomerToUpdate.Location = new Point(496, 75);
+            lblIDCustomerToUpdate.Location = new Point(809, 114);
             lblIDCustomerToUpdate.Name = "lblIDCustomerToUpdate";
-            lblIDCustomerToUpdate.Size = new Size(108, 20);
+            lblIDCustomerToUpdate.Size = new Size(88, 15);
             lblIDCustomerToUpdate.TabIndex = 0;
             lblIDCustomerToUpdate.Text = "הכנס ת.ז. לזיהוי";
             // 
@@ -283,19 +296,21 @@
             tabDeleteCustomer.Controls.Add(btnDeleteCustomer);
             tabDeleteCustomer.Controls.Add(nudIDtoDeleteCustomer);
             tabDeleteCustomer.Controls.Add(lblIDtoDeleteCustomer);
-            tabDeleteCustomer.Location = new Point(4, 29);
+            tabDeleteCustomer.Location = new Point(4, 24);
+            tabDeleteCustomer.Margin = new Padding(3, 2, 3, 2);
             tabDeleteCustomer.Name = "tabDeleteCustomer";
-            tabDeleteCustomer.Padding = new Padding(3);
-            tabDeleteCustomer.Size = new Size(707, 353);
+            tabDeleteCustomer.Padding = new Padding(3, 2, 3, 2);
+            tabDeleteCustomer.Size = new Size(1083, 531);
             tabDeleteCustomer.TabIndex = 2;
             tabDeleteCustomer.Text = "מחיקת לקוח";
             tabDeleteCustomer.UseVisualStyleBackColor = true;
             // 
             // btnDeleteCustomer
             // 
-            btnDeleteCustomer.Location = new Point(120, 255);
+            btnDeleteCustomer.Location = new Point(526, 345);
+            btnDeleteCustomer.Margin = new Padding(3, 2, 3, 2);
             btnDeleteCustomer.Name = "btnDeleteCustomer";
-            btnDeleteCustomer.Size = new Size(94, 29);
+            btnDeleteCustomer.Size = new Size(82, 22);
             btnDeleteCustomer.TabIndex = 13;
             btnDeleteCustomer.Text = "למחיקה";
             btnDeleteCustomer.UseVisualStyleBackColor = true;
@@ -303,18 +318,19 @@
             // 
             // nudIDtoDeleteCustomer
             // 
-            nudIDtoDeleteCustomer.Location = new Point(334, 73);
+            nudIDtoDeleteCustomer.Location = new Point(596, 141);
+            nudIDtoDeleteCustomer.Margin = new Padding(3, 2, 3, 2);
             nudIDtoDeleteCustomer.Maximum = new decimal(new int[] { -727379968, 232, 0, 0 });
             nudIDtoDeleteCustomer.Name = "nudIDtoDeleteCustomer";
-            nudIDtoDeleteCustomer.Size = new Size(150, 27);
+            nudIDtoDeleteCustomer.Size = new Size(131, 23);
             nudIDtoDeleteCustomer.TabIndex = 12;
             // 
             // lblIDtoDeleteCustomer
             // 
             lblIDtoDeleteCustomer.AutoSize = true;
-            lblIDtoDeleteCustomer.Location = new Point(490, 75);
+            lblIDtoDeleteCustomer.Location = new Point(733, 142);
             lblIDtoDeleteCustomer.Name = "lblIDtoDeleteCustomer";
-            lblIDtoDeleteCustomer.Size = new Size(185, 20);
+            lblIDtoDeleteCustomer.Size = new Size(149, 15);
             lblIDtoDeleteCustomer.TabIndex = 11;
             lblIDtoDeleteCustomer.Text = "הכנס ת.ז. למחיקת משתמש";
             // 
@@ -327,35 +343,46 @@
             tabDesineCustomers.Controls.Add(btnRead);
             tabDesineCustomers.Controls.Add(lblReadCustomer);
             tabDesineCustomers.Controls.Add(lblReadAll);
-            tabDesineCustomers.Location = new Point(4, 29);
+            tabDesineCustomers.Location = new Point(4, 24);
+            tabDesineCustomers.Margin = new Padding(3, 2, 3, 2);
             tabDesineCustomers.Name = "tabDesineCustomers";
-            tabDesineCustomers.Padding = new Padding(3);
-            tabDesineCustomers.Size = new Size(707, 353);
+            tabDesineCustomers.Padding = new Padding(3, 2, 3, 2);
+            tabDesineCustomers.Size = new Size(1083, 531);
             tabDesineCustomers.TabIndex = 3;
             tabDesineCustomers.Text = "הצגת לקוחות";
             tabDesineCustomers.UseVisualStyleBackColor = true;
             // 
+            // lblReadAllCustomers
+            // 
+            lblReadAllCustomers.AutoSize = true;
+            lblReadAllCustomers.Location = new Point(18, 24);
+            lblReadAllCustomers.Name = "lblReadAllCustomers";
+            lblReadAllCustomers.Size = new Size(0, 15);
+            lblReadAllCustomers.TabIndex = 6;
+            // 
             // lblReadNew
             // 
             lblReadNew.AutoSize = true;
-            lblReadNew.Location = new Point(45, 41);
+            lblReadNew.Location = new Point(39, 31);
             lblReadNew.Name = "lblReadNew";
-            lblReadNew.Size = new Size(0, 20);
+            lblReadNew.Size = new Size(0, 15);
             lblReadNew.TabIndex = 5;
             // 
             // nudReadCustomer
             // 
-            nudReadCustomer.Location = new Point(367, 53);
+            nudReadCustomer.Location = new Point(577, 121);
+            nudReadCustomer.Margin = new Padding(3, 2, 3, 2);
             nudReadCustomer.Maximum = new decimal(new int[] { 1410065408, 2, 0, 0 });
             nudReadCustomer.Name = "nudReadCustomer";
-            nudReadCustomer.Size = new Size(150, 27);
+            nudReadCustomer.Size = new Size(131, 23);
             nudReadCustomer.TabIndex = 4;
             // 
             // btnRead
             // 
-            btnRead.Location = new Point(560, 107);
+            btnRead.Location = new Point(532, 315);
+            btnRead.Margin = new Padding(3, 2, 3, 2);
             btnRead.Name = "btnRead";
-            btnRead.Size = new Size(94, 29);
+            btnRead.Size = new Size(82, 22);
             btnRead.TabIndex = 3;
             btnRead.Text = "חפש";
             btnRead.UseVisualStyleBackColor = true;
@@ -364,34 +391,27 @@
             // lblReadCustomer
             // 
             lblReadCustomer.AutoSize = true;
-            lblReadCustomer.Location = new Point(527, 55);
+            lblReadCustomer.Location = new Point(717, 122);
             lblReadCustomer.Name = "lblReadCustomer";
-            lblReadCustomer.Size = new Size(124, 20);
+            lblReadCustomer.Size = new Size(101, 15);
             lblReadCustomer.TabIndex = 1;
             lblReadCustomer.Text = "חפש לקוח לפי ת.ז";
             // 
             // lblReadAll
             // 
             lblReadAll.AutoSize = true;
-            lblReadAll.Location = new Point(155, 58);
+            lblReadAll.Location = new Point(136, 44);
             lblReadAll.Name = "lblReadAll";
-            lblReadAll.Size = new Size(0, 20);
+            lblReadAll.Size = new Size(0, 15);
             lblReadAll.TabIndex = 0;
-            // 
-            // lblReadAllCustomers
-            // 
-            lblReadAllCustomers.AutoSize = true;
-            lblReadAllCustomers.Location = new Point(20, 32);
-            lblReadAllCustomers.Name = "lblReadAllCustomers";
-            lblReadAllCustomers.Size = new Size(0, 20);
-            lblReadAllCustomers.TabIndex = 6;
             // 
             // CustomersMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1181, 612);
             Controls.Add(products);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "CustomersMenu";
             Text = "CustomersMenu";
             products.ResumeLayout(false);

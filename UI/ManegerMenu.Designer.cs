@@ -35,7 +35,7 @@
             // 
             // btnSaleManeger
             // 
-            btnSaleManeger.Location = new Point(168, 173);
+            btnSaleManeger.Location = new Point(354, 243);
             btnSaleManeger.Name = "btnSaleManeger";
             btnSaleManeger.Size = new Size(139, 56);
             btnSaleManeger.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnProductsManeger
             // 
-            btnProductsManeger.Location = new Point(331, 173);
+            btnProductsManeger.Location = new Point(517, 243);
             btnProductsManeger.Name = "btnProductsManeger";
             btnProductsManeger.Size = new Size(139, 56);
             btnProductsManeger.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // btnCustomersManeger
             // 
-            btnCustomersManeger.Location = new Point(493, 173);
+            btnCustomersManeger.Location = new Point(679, 243);
             btnCustomersManeger.Name = "btnCustomersManeger";
             btnCustomersManeger.Size = new Size(139, 56);
             btnCustomersManeger.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1178, 613);
             Controls.Add(btnCustomersManeger);
             Controls.Add(btnProductsManeger);
             Controls.Add(btnSaleManeger);
